@@ -1,4 +1,4 @@
-const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://example.com';
+const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://vantage-lending.onrender.com';
 
 export const site = {
   name: 'Vantage Lending',
