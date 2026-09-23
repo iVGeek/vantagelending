@@ -1,0 +1,208 @@
+---
+import Base from '../../layouts/Base.astro';
+import Faq from '../../components/Faq.astro';
+import Calculator from '../../components/Calculator.astro';
+import { products, getProduct } from '../../data/products.mjs';
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const p = getProduct(slug);
+const links = products.filter((x) => x.slug !== slug);
+---
+
+<Base title={p.meta.title} description={p.meta.description}>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/products/">Products</a> / {p.name}
+    </nav>
+  </div>
+
+  <section class="hero" style="padding-top:1.5rem;">
+    <div class="container">
+      <span class="eyebrow">{p.hero.eyebrow}</span>
+      <h1>{p.hero.h1}</h1>
+      <p class="sub">{p.hero.sub}</p>
+      <p class="note" style="display:inline-block;">{p.hero.note}</p>
+      <div style="margin-top:1.4rem;">
+        <a class="btn btn-primary" href="/apply/">Apply now</a> {''}
+        <a class="btn btn-ghost" href="/rates/">See rates</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="stat-band stats-4">
+        {p.stats.map((s) => (
+          <div><b style="font-size:1.35rem;">{s.value}</b><span>{s.label}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid-products" style="grid-template-columns:1fr 1fr;">
+        <div class="card">
+          <span class="eyebrow">{p.useCases.eyebrow}</span>
+          <h3>{p.useCases.heading}</h3>
+          <ul class="tick-list">
+            {p.useCases.items.map((i) => <li>{i}</li>)}
+          </ul>
+        </div>
+        <div class="card">
+          <span class="eyebrow">{p.benefits.eyebrow}</span>
+          <h3>{p.benefits.heading}</h3>
+          <ul class="tick-list">
+            {p.benefits.items.map((i) => <li>{i}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Rates</span>
+        <h2>{p.name} pricing</h2>
+        <p>{p.rates.lead}</p>
+      </div>
+      <table class="data" style="margin-top:1rem;">
+        <thead>
+          <tr>{p.rates.table.columns.map((c) => <th>{c}</th>)}</tr>
+        </thead>
+        <tbody>
+          {p.rates.table.rows.map((r) => (
+            <tr>{r.map((c, i) => (i === 0 ? <td><b>{c}</b></td> : <td>{c}</td>))}</tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:1rem;">{p.rates.note}</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid-products" style="grid-template-columns:1fr 1fr;">
+        <div class="card">
+          <span class="eyebrow">Criteria</span>
+          <h3>{p.criteria.heading}</h3>
+          <ul class="tick-list">
+            {p.criteria.items.map((i) => <li>{i}</li>)}
+          </ul>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Fees</span>
+          <h3>{p.fees.heading}</h3>
+          <ul class="tick-list">
+            {p.fees.items.map((i) => <li>{i}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{p.example.eyebrow}</span>
+        <h2>{p.example.heading}</h2>
+      </div>
+      <table class="data">
+        <tbody>
+          {p.example.ledger.map((l) => (
+            <tr><td>{l.label}</td><td style="text-align:right; font-weight:700;">{l.value}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:1rem;">{p.example.note}</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Process</span>
+        <h2>{p.process.heading}</h2>
+      </div>
+      <div class="stat-band steps-4" style="border:0; padding:0; gap:1rem;">
+        {p.process.steps.map((s) => (
+          <div class="card" style="padding:1.1rem;">
+            <b style="color:var(--accent-strong); display:block;">Step {s.n}</b>
+            <h3 style="font-size:1rem; margin:.3rem 0;">{s.title}</h3>
+            <p style="color:var(--muted); font-size:.92rem; margin:0;">{s.copy}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="detail-cols" style="margin-top:2rem; align-items:start;">
+        <Calculator compact />
+        <div>
+          <span class="eyebrow">FAQs</span>
+          <h2 style="margin-top:.4rem;">Straight answers</h2>
+          <Faq items={p.faqs} />
+          <div style="margin-top:1.4rem;">
+            <a class="btn btn-dark" href="/apply/">Apply now</a> {''}
+            <a class="btn btn-ghost" href="/contact/">Talk it through</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">More products</span>
+        <h2>Related facilities</h2>
+      </div>
+      <div class="grid-products" style="grid-template-columns:repeat(2,1fr);">
+        {links.slice(0, 4).map((x) => (
+          <a class="card" href={x.href} style="text-decoration:none;">
+            <b style="color:var(--accent-strong);">{x.hook}</b>
+            <h3 style="margin:.35rem 0;">{x.name}</h3>
+            <p style="color:var(--muted); margin:0; font-size:.92rem;">{x.band} · {x.term}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .stats-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .steps-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .detail-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 860px) {
+    .stats-4,
+    .steps-4 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-cols {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .stats-4,
+    .steps-4 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

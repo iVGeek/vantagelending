@@ -1,0 +1,77 @@
+﻿---
+import Base from '../../layouts/Base.astro';
+import Calculator from '../../components/Calculator.astro';
+import { products } from '../../data/products.mjs';
+---
+
+<Base
+  title="Rates | Vantage Lending"
+  description="Published rates for business loans and bridging — per-30-days pricing for business, per-month LTV bands for bridging, and the full fee schedule."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Rates</span>
+      <h1>One price list. No hidden columns.</h1>
+      <p class="sub">Every product’s headline rate and fee schedule, set out the way we’d want to read it.</p>
+    </div>
+  </section>
+
+  {
+    products.map((p) => (
+      <section class="section" style={p !== products[0] ? 'padding-top:0;' : 'padding-top:0.5rem;'}>
+        <div class="container">
+          <div class="section-head">
+            <h2 style="font-size:1.6rem;"><a href={p.href} style="color:inherit;">{p.name}</a> — {p.hook}</h2>
+            <p>{p.rates.lead}</p>
+          </div>
+          <table class="data" style="margin-top:1rem;">
+            <thead>
+              <tr>{p.rates.table.columns.map((c) => <th>{c}</th>)}</tr>
+            </thead>
+            <tbody>
+              {p.rates.table.rows.map((r) => (
+                <tr>{r.map((c, i) => (i === 0 ? <td><b>{c}</b></td> : <td>{c}</td>))}</tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="note" style="margin-top:1rem;">{p.rates.note}</p>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Fees</span>
+        <h2>The fee schedule, in one breath</h2>
+      </div>
+      <div class="grid-products" style="grid-template-columns:1fr 1fr;">
+        <div class="card">
+          <h3>Bridging products</h3>
+          <ul class="tick-list">
+            <li>Arrangement fee: 2% (add to the loan if preferred)</li>
+            <li>Valuation: paid directly to the panel valuer</li>
+            <li>Telegraphic transfer: £30 at completion</li>
+            <li>No exit fee, no ERC, no monthly servicing fee</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Business finance</h3>
+          <ul class="tick-list">
+            <li>No application fee</li>
+            <li>No early-repayment charge</li>
+            <li>Revenue-based: one fixed all-in cost in writing</li>
+            <li>No brokerage fee when dealing directly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container" style="max-width:820px;">
+      <Calculator />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,19 @@
+﻿---
+import Base from '../../layouts/Base.astro';
+import ApplyForm from '../../components/ApplyForm.astro';
+import { site } from '../../data/site.mjs';
+---
+
+<Base
+  title="Apply | Vantage Lending"
+  description="Apply for a Vantage Lending facility in two minutes. Soft check only — no credit-score impact until you accept a written offer."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container" style="max-width:820px;">
+      <span class="eyebrow">Apply</span>
+      <h1>Start with a form, finish with a written offer</h1>
+      <p class="sub">Soft check at application. An underwriter confirms pricing in writing before you commit to anything.</p>
+      <ApplyForm />
+    </div>
+  </section>
+</Base>

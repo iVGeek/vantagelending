@@ -1,0 +1,139 @@
+---
+import { site } from '../data/site.mjs';
+---
+
+<header class="topbar">
+  <div class="container topbar-in">
+    <a class="brand" href="/">
+      <span class="brand-mark">VL</span>
+      <span class="brand-name">Vantage Lending</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/products/">Loans</a>
+      <a href="/rates/">Rates</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="phone" href={`tel:${site.phone.replace(/ /g, '')}`}>{site.phone}</a>
+      <a class="btn btn-primary" href="/apply/">Apply</a>
+    </div>
+    <details class="mobile">
+      <summary aria-label="Menu">☰</summary>
+      <div class="mobile-links">
+        <a href="/products/">Loans</a>
+        <a href="/rates/">Rates</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a class="btn btn-primary" href="/apply/">Apply</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topbar-in {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 64px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-mark {
+    background: var(--ink);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 0.15rem 0.35rem;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.4rem;
+    margin-left: auto;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .nav a:hover {
+    color: var(--accent-strong);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .phone {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .mobile {
+    display: none;
+    margin-left: auto;
+  }
+
+  .mobile summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .mobile-links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .mobile-links a {
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .nav,
+    .actions .phone {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+  }
+</style>

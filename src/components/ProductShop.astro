@@ -1,0 +1,13 @@
+---
+const { product } = Astro.props;
+---
+
+<a class="shop" href={product.href}>
+  <div class="rate">{product.hook}</div>
+  <h3>{product.name}</h3>
+  <p class="meta">{product.band} · {product.term}</p>
+  <ul>
+    {product.cardPoints.map((p) => <li>{p}</li>)}
+  </ul>
+  <span class="btn btn-ghost" style="margin-top:auto; text-align:center;">View details</span>
+</a>

@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductShop from '../components/ProductShop.astro';
+import { products } from '../data/products.mjs';
+import { site } from '../data/site.mjs';
+---
+
+<Base
+  title="Vantage Lending | Business loans & bridging finance, direct"
+  description="Straightforward business loans and residential & commercial bridging. Published rates, soft checks, no early-repayment fees."
+>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Business loans &amp; property bridging</span>
+      <h1>Finance, without the fine print.</h1>
+      <p class="sub">
+        Six products. One price list. Soft checks at application, funds fast, and no early-repayment fees — terms set out in writing before you sign.
+      </p>
+      <a class="btn btn-primary" href="/products/">Browse the products</a> {''}
+      <a class="btn btn-ghost" href="/rates/">View rates</a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The range</span>
+        <h2>Six products, shop them like prices</h2>
+        <p>Every product shows its rate, range and term up front — because the price list shouldn’t be behind a phone call.</p>
+      </div>
+      <div class="grid-products">
+        {products.map((p) => <ProductShop product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="stat-band">
+        {site.stats.map((s) => (
+          <div><b>{s.value}</b><span>{s.label}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="grid-products" style="grid-template-columns:1fr 1fr;">
+        <div class="card">
+          <h3>No application fee, no ERC</h3>
+          <p style="color:var(--muted);">Our fee behaviour is the product: soft checks until you accept, no exit fee, and interest only for the days you use.</p>
+          <ul class="tick-list">
+            {site.trust.map((t) => <li>{t}</li>)}
+          </ul>
+        </div>
+        <div class="card">
+          <h3>An underwriter, not an inbox</h3>
+          <p style="color:var(--muted);">Residential and commercial bridging run with one named underwriter from enquiry to completion — no hand-offs, no lost documents.</p>
+          <a class="btn btn-dark" href="/about/">How we work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

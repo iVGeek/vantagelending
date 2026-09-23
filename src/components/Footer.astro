@@ -1,0 +1,116 @@
+---
+import { site } from '../data/site.mjs';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">VL</span>
+          <span class="brand-name">Vantage Lending</span>
+        </div>
+        <p class="disclosure" style="max-width:46ch;">{site.footerNote}</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Loans</h4>
+          <ul>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/products/unsecured-business-loans/">Unsecured business loans</a></li>
+            <li><a href="/products/residential-bridging/">Residential bridging</a></li>
+            <li><a href="/products/commercial-bridging/">Commercial bridging</a></li>
+            <li><a href="/rates/">Rates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/apply/">Apply</a></li>
+            <li><a href="/legal/">Legal &amp; compliance</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      {site.phone} · {site.email} · {site.address} · {site.hours}
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    background: #fafafa;
+    margin-top: 4rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+  }
+
+  .brand-mark {
+    background: var(--ink);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 0.15rem 0.35rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-cols h4 {
+    margin: 0 0 0.6rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .footer-cols ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-cols a {
+    display: block;
+    padding: 0.22rem 0;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  .footer-cols a:hover {
+    color: var(--accent-strong);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 1.1rem 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 720px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

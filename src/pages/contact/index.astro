@@ -1,0 +1,111 @@
+﻿---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site.mjs';
+---
+
+<Base
+  title="Contact | Vantage Lending"
+  description="Contact Vantage Lending about a facility or an existing case."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Call us, or tell us what you need</h1>
+      <p class="sub">New enquiries, existing cases and general questions go to real people — not a ticket queue.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="grid-products" style="grid-template-columns:1fr 1fr; align-items:start;">
+        <div>
+          <div class="card" style="margin-bottom:1rem;">
+            <h3 style="margin-top:0;">Direct lines</h3>
+            <ul class="tick-list" style="margin:0;">
+              <li>Phone: <a href={`tel:${site.phone.replace(/ /g, '')}`} style="font-weight:700;">{site.phone}</a></li>
+              <li>Email (existing cases): <a href={`mailto:${site.email}`} style="font-weight:700;">{site.email}</a></li>
+              <li>New applications: email the same address — it lands with an underwriter.</li>
+            </ul>
+            <p style="color:var(--muted); font-size:.9rem; margin-bottom:0;">{site.hours}. {site.address}. {site.fca}.</p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0;">Before you apply</h3>
+            <p style="color:var(--muted); margin:0;">Most enquiries take under a day to answer. Applying via the form triggers the soft check, which does not affect your credit score.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.8rem;">
+          <h2 style="margin-top:0;">Send a message</h2>
+          <form id="shop-contact" data-endpoint={site.formEndpoint}>
+            <div class="form-field">
+              <label for="c-name">Name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="c-topic">Topic</label>
+                <select id="c-topic" name="topic">
+                  <option>Business finance</option>
+                  <option>Bridging</option>
+                  <option>Development / refinance</option>
+                  <option>Existing case</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="5" required></textarea>
+            </div>
+            <label class="consent" style="margin:0.6rem 0 1rem;">
+              <input type="checkbox" required />
+              <span>I agree Vantage Lending may use the details above to respond and, if relevant, assess an application.</span>
+            </label>
+            <button class="btn btn-dark" type="submit" style="width:100%;">Send message</button>
+          </form>
+
+          <div id="shop-contact-success" hidden style="text-align:center; padding:1.5rem 0;">
+            <div style="font-size:2rem;">✓</div>
+            <h3 style="margin:0.4rem 0;">Message received</h3>
+            <p style="color:var(--muted);">We answer on business days during {site.hours.toLowerCase()}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById('shop-contact');
+  const success = document.getElementById('shop-contact-success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    const endpoint = form.dataset.endpoint;
+    if (endpoint) {
+      try {
+        const res = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error('endpoint error');
+      } catch (err) {
+        btn.disabled = false;
+        alert('The form could not be sent. Please email hello@vantagelending.co.uk instead.');
+        return;
+      }
+    } else {
+      console.warn('[Vantage] No formEndpoint set in src/data/site.mjs — showing local success state only.');
+    }
+    form.hidden = true;
+    success.hidden = false;
+  });
+</script>
