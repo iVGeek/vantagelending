@@ -1,0 +1,12 @@
+services:
+  - type: static
+    name: vantage-lending
+    runtime: static
+    repo: https://github.com/iVGeek/vantagelending
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: PUBLIC_SITE_URL
+        value: https://vantage-lending.onrender.com
