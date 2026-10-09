@@ -57,7 +57,7 @@ export const products = [
           ['£250,000–£1,000,000', '12–60 months', 'from 1.2%'],
         ],
       },
-      note: 'Representative example: £25,000 over 24 months at 1.5% per 30 days accrues about £11,250 of interest in a typical setup; total repayable depends on actual days used. Exact pricing confirmed on application.',
+      note: 'Representative example: £25,000 over 24 months at 1.5% per 30 days. If the full balance stayed outstanding for the whole term that would be about £9,000 of interest (£375 per 30 days); with regular monthly repayments, actual interest is lower. Exact pricing confirmed on application.',
     },
     criteria: {
       heading: 'Key criteria',
@@ -515,7 +515,7 @@ export const products = [
     faqs: [
       {
         q: 'Is commercial bridging regulated?',
-        a: 'No — commercial and semi-commercial bridging is unsecured-lending regulation territory and our commercial bridging is not FCA regulated. That keeps the process faster and simpler, and we say so in writing.',
+        a: 'No — commercial and semi-commercial bridging is an unregulated product under FCA rules, so that route is not FCA regulated. That keeps the process faster and simpler, and we say so in writing.',
       },
       {
         q: 'Can an intermediary represent both sides?',
@@ -692,7 +692,7 @@ export const products = [
       items: [
         'Purchasing a buy-to-let now and steadying into a longer-term mortgage later',
         'Buying at auction, then letting after light refurbishment',
-        'Creating a pending bond for STL or letting meanwhile you refinance',
+        'Buying for a short-term or holiday let now, then refinancing once the rental income is established',
         'Exiting a development into a hold position on your own terms',
         'Property investors who want certainty across two stages, not two lenders',
       ],

@@ -122,7 +122,7 @@ export const faqGroups = [
       },
       {
         q: 'Do you accept applications through brokers?',
-        a: 'Yes. We have a dedicated introducer portal, factsheets and a BDM structure for intermediaries — details on the Intermediaries page.',
+        a: 'Yes. We have a dedicated introducer portal, factsheets and a BDM structure for intermediaries — get in touch through the Contact page and the team will set up your access.',
       },
     ],
   },

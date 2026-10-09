@@ -11,7 +11,7 @@ export const site = {
   address: 'London, UK (placeholder office address)',
   hours: 'Mon–Fri, 9:00–17:30',
   fca: 'FCA reference XXXXXX',
-  companyNo: 'Company no. 12345678',
+  companyNo: 'Company no. XXXXXXXX',
   ico: 'ICO reference XXXXXXXX (placeholder)',
   publishNote: 'Updated Oct 2026. All rates are indicative placeholder pricing from market ranges, not committed quotes.',
   trust: [
