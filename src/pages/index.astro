@@ -1,42 +1,53 @@
 ---
 import Base from '../layouts/Base.astro';
 import ProductShop from '../components/ProductShop.astro';
+import Calculator from '../components/Calculator.astro';
+import Faq from '../components/Faq.astro';
 import { products } from '../data/products.mjs';
+import { guides } from '../data/resources.mjs';
+import { homeCaseStudies } from '../data/caseStudies.mjs';
+import { homeFaqs } from '../data/faqs.mjs';
 import { site } from '../data/site.mjs';
 ---
 
 <Base
-  title="Vantage Lending | Business loans & bridging finance, direct"
-  description="Straightforward business loans and residential & commercial bridging. Published rates, soft checks, no early-repayment fees."
+  title="SME Lending Platform | Borrow and invest in SME finance"
+  description="Direct SME lending, business bridging and a place to invest. Six products on a published price list, tools that price deals live, and a restricted invest side."
 >
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Business loans &amp; property bridging</span>
-      <h1>Finance, without the fine print.</h1>
+      <span class="eyebrow">Borrow or invest · {site.tagline}</span>
+      <h1>One platform, two sides of the same table.</h1>
       <p class="sub">
-        Six products. One price list. Soft checks at application, funds fast, and no early-repayment fees — terms set out in writing before you sign.
+        SMEs and property investors borrow on a published price list with live pricing tools. Investors deploy into
+        the same deals — behind an eligibility gate, with returns that are indicative, never promised.
       </p>
-      <a class="btn btn-primary" href="/products/">Browse the products</a> {''}
-      <a class="btn btn-ghost" href="/rates/">View rates</a>
+      <div class="hero-dual">
+        <a class="path-card" href="/products/">
+          <b>I need finance</b>
+          <p>Six products, published rates, soft checks. Price it live on the calculators, then apply for a written offer.</p>
+          <span class="go">Explore borrowing →</span>
+        </a>
+        <a class="path-card" href="/invest/">
+          <b>I want to invest</b>
+          <p>Deal-by-deal lending into SME and property finance, for high-net-worth, sophisticated and institutional investors.</p>
+          <span class="go">Explore investing →</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="section" style="padding-top:1rem;">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">The range</span>
-        <h2>Six products, shop them like prices</h2>
+        <span class="eyebrow">Borrow</span>
+        <h2>Six products, priced like a shop</h2>
         <p>Every product shows its rate, range and term up front — because the price list shouldn’t be behind a phone call.</p>
       </div>
       <div class="grid-products">
         {products.map((p) => <ProductShop product={p} />)}
       </div>
-    </div>
-  </section>
-
-  <section class="section" style="border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="stat-band">
+      <div class="stat-band" style="margin-top:2rem;">
         {site.stats.map((s) => (
           <div><b>{s.value}</b><span>{s.label}</span></div>
         ))}
@@ -44,21 +55,100 @@ import { site } from '../data/site.mjs';
     </div>
   </section>
 
-  <section class="section" style="padding-top:0;">
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head" style="text-align:center;">
+        <span class="eyebrow">Live pricing</span>
+        <h2>Move the sliders. Watch the numbers move.</h2>
+        <p>The same calculator core runs across rates, products and the invest side.</p>
+      </div>
+      <Calculator />
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
     <div class="container">
-      <div class="grid-products" style="grid-template-columns:1fr 1fr;">
+      <div class="invest-band">
+        <span class="eyebrow">Invest</span>
+        <h2 style="margin:.3rem 0 .5rem;">The other side of the table</h2>
+        <p style="color:var(--muted); margin:0; max-width:62ch;">
+          Retail-size and institutional capital funding the lending book you just browsed. Self-certify as high-net-worth,
+          sophisticated or institutional to see live deal terms and a mirrored return calculator.
+        </p>
+        <a class="btn btn-dark" href="/invest/">How investing works</a>{' '}
+        <a class="btn btn-ghost" href="/invest/deals/">See the live deals</a>
+        <p class="disclosure" style="margin-top:.8rem;">{site.investNote}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Learn</span>
+        <h2>Finance, translated</h2>
+        <p>Plain-English guides that decode the rates, the fees and the questions lenders actually work through.</p>
+      </div>
+      <div class="grid-articles">
+        {guides.slice(0, 3).map((g) => (
+          <a class="article-card" href={`/learn/${g.slug}/`}>
+            <div class="meta-line">{g.group}</div>
+            <h3>{g.title}</h3>
+            <p>{g.teaser}</p>
+            <span class="read">{g.read} →</span>
+          </a>
+        ))}
+      </div>
+      <div class="grid-articles" style="grid-template-columns:1fr 1fr; margin-top:1.2rem;">
         <div class="card">
-          <h3>No application fee, no ERC</h3>
-          <p style="color:var(--muted);">Our fee behaviour is the product: soft checks until you accept, no exit fee, and interest only for the days you use.</p>
-          <ul class="tick-list">
-            {site.trust.map((t) => <li>{t}</li>)}
-          </ul>
+          <span class="eyebrow">Compare</span>
+          <h3 style="margin:.5rem 0;">All products, side by side</h3>
+          <p style="color:var(--muted); margin-bottom:1.2rem;">Rates, ranges, fees and exit behaviour in one table — no phone call required.</p>
+          <a class="btn btn-ghost" href="/compare/">Open the table</a>
         </div>
         <div class="card">
-          <h3>An underwriter, not an inbox</h3>
-          <p style="color:var(--muted);">Residential and commercial bridging run with one named underwriter from enquiry to completion — no hand-offs, no lost documents.</p>
-          <a class="btn btn-dark" href="/about/">How we work</a>
+          <span class="eyebrow">Glossary</span>
+          <h3 style="margin:.5rem 0;">Decode the acronyms</h3>
+          <p style="color:var(--muted); margin-bottom:1.2rem;">LTV, GDV, ERC, AIP… translated into plain English.</p>
+          <a class="btn btn-ghost" href="/learn/glossary/">Open the glossary</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Proof</span>
+        <h2>Cases where the patient answer won</h2>
+        <p>Many of these deals were “no” elsewhere first — the reason why is part of the story.</p>
+      </div>
+      <div class="grid-cases">
+        {homeCaseStudies.map((c) => (
+          <article class="case-card">
+            <div class="case-stat">{c.stat}</div>
+            <h3>{c.title}</h3>
+            {c.refused && <p class="refused">{c.refused}</p>}
+            <p style="color:var(--muted); font-size:.95rem;">{c.situation}</p>
+          </article>
+        ))}
+      </div>
+      <div style="margin-top:1.4rem;">
+        <a class="btn btn-dark" href="/case-studies/">All case studies</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head">
+        <span class="eyebrow">FAQs</span>
+        <h2>Straight answers first</h2>
+      </div>
+      <Faq items={homeFaqs.slice(0, 5)} />
+      <div style="margin-top:1.4rem;">
+        <a class="btn btn-primary" href="/apply/">Start an application</a>{' '}
+        <a class="btn btn-ghost" href="/faqs/">All FAQs</a>
       </div>
     </div>
   </section>

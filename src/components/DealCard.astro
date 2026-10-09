@@ -1,0 +1,94 @@
+---
+const { deal } = Astro.props;
+---
+
+<article class="deal-card">
+  <div class="deal-head">
+    <span class="deal-type">{deal.type}</span>
+    <span class="deal-status">{deal.status}</span>
+  </div>
+  <h3 style="margin:.5rem 0 .3rem;">{deal.location}</h3>
+  <p class="deal-green" style="font-size:1.15rem; font-weight:800; margin:0;">{deal.gross}</p>
+  <p class="disclosure" style="margin:.2rem 0 .9rem;">Indicative target return — not a guarantee.</p>
+  <ul class="tick-list" style="margin:.6rem 0;">
+    <li>Security: {deal.security}</li>
+    <li>LTV: {deal.ltv}</li>
+    <li>Term: {deal.term}</li>
+    <li>Minimum ticket: {deal.minTicket}</li>
+  </ul>
+  <p style="color:var(--muted); font-size:.92rem;">{deal.story}</p>
+  <div class="deal-progress">
+    <div class="deal-progress-track"><span style="width:{deal.progress}%;"></span></div>
+    <div class="deal-progress-meta">
+      <span>{deal.progress}% committed</span>
+      <span>Registration of interest only</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  .deal-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .deal-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .deal-type {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-strong);
+    background: var(--accent-soft);
+    padding: 0.25rem 0.55rem;
+    border-radius: 99px;
+  }
+
+  .deal-status {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  .deal-green {
+    color: var(--accent-strong);
+  }
+
+  .deal-progress {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+
+  .deal-progress-track {
+    height: 8px;
+    background: var(--border);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .deal-progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 99px;
+  }
+
+  .deal-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import ArticleCards from '../../components/ArticleCards.astro';
+import { guides } from '../../data/resources.mjs';
+import { site } from '../../data/site.mjs';
+---
+
+<Base
+  title="Learning Library | SME Lending Platform"
+  description="Plain-English guides to business loans, bridging and property finance — from the platform that publishes its own rates."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Learn</span>
+      <h1>Understand the numbers before you sign them</h1>
+      <p class="sub">{guides.length} plain-English guides to business and property finance — rates, fees, criteria and the questions lenders actually work through.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="stat-band">
+        <div><b>{guides.length}</b><span>published guides</span></div>
+        <div><b>{site.publishNote}</b><span>last reviewed</span></div>
+        <div><b>0.64%p/m</b><span>typical UK bridging floor in our published range</span></div>
+      </div>
+      <ArticleCards />
+      <div style="margin-top:1.6rem;">
+        <a class="card" href="/learn/glossary/" style="display:block; text-decoration:none;">
+          <span class="eyebrow">Reference</span>
+          <h3 style="margin:.4rem 0;">The glossary — every lender term, translated</h3>
+          <p style="color:var(--muted); margin:0;">LTV, GDV, ERC, factor rate, retained interest, dual representation — plain English, no jargon.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="card">
+        <span class="eyebrow">On the shelf next</span>
+        <h3 style="margin:.4rem 0;">Planned guides</h3>
+        <ul class="tick-list" style="margin:0;">
+          <li>VAT on property — where bridging loans sit in the invoice and refund mechanics.</li>
+          <li>Special situations — probate, holiday lets, leases and more unusual exits.</li>
+          <li>You’re risk-averse — the conservative route through property and business finance.</li>
+          <li>SDLT and first-time-buyer bridging — stamp taxes meet short-term lending.</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-ghost" href="/compare/">Compare the six products meanwhile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

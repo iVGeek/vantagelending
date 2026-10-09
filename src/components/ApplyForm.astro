@@ -72,11 +72,11 @@ import { site } from '../data/site.mjs';
         if (!res.ok) throw new Error('endpoint error');
       } catch (err) {
         btn.disabled = false;
-        alert('The form could not be sent. Please email hello@vantagelending.co.uk instead.');
+        alert('The form could not be sent. Please email hello@smelending.co.uk instead.');
         return;
       }
     } else {
-      console.warn('[Vantage] No formEndpoint set in src/data/site.mjs — showing local success state only.');
+      console.warn('[SLP] No formEndpoint set in src/data/site.mjs — showing local success state only.');
     }
     form.hidden = true;
     success.hidden = false;

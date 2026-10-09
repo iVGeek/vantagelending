@@ -9,7 +9,7 @@ export const products = [
     href: '/products/unsecured-business-loans/',
     cardPoints: ['No security required', 'Soft credit check at application', 'Pay early, for free'],
     meta: {
-      title: 'Unsecured Business Loans | from 1.5% per 30 days | Vantage Lending',
+      title: 'Unsecured Business Loans | from 1.5% per 30 days | SME Lending Platform',
       description:
         'Unsecured business loans from £10k–£1m. From 1.5% per 30 days, terms to 60 months, no security and free early repayment.',
     },
@@ -140,7 +140,7 @@ export const products = [
     href: '/products/revenue-based-finance/',
     cardPoints: ['Repay when customers pay you', 'No fixed monthly payment', 'Same-day top-ups available'],
     meta: {
-      title: 'Revenue-Based Finance | Repay from Card Sales | Vantage Lending',
+      title: 'Revenue-Based Finance | Repay from Card Sales | SME Lending Platform',
       description:
         'Revenue-based finance repaid as a small, fixed percentage of your future card and online sales. No fixed monthly payments, no fixed term, top-ups from day one.',
     },
@@ -271,7 +271,7 @@ export const products = [
     href: '/products/residential-bridging/',
     cardPoints: ['Chain-break, auction & capital raising', 'Up to 75% LTV', 'No ERC or exit fees'],
     meta: {
-      title: 'Residential Bridging Loans | from 0.64% per month | Vantage Lending',
+      title: 'Residential Bridging Loans | from 0.64% per month | SME Lending Platform',
       description:
         'Residential bridging loans from 0.64% per month. Up to 75% LTV and £50k–£10m. Terms in hours, funds at completion, no exit fees.',
     },
@@ -404,7 +404,7 @@ export const products = [
     href: '/products/commercial-bridging/',
     cardPoints: ['Commercial, semi-commercial & land', 'Up to 75% LTV', 'Dual representation available'],
     meta: {
-      title: 'Commercial Bridging Loans | from 0.89% per month | Vantage Lending',
+      title: 'Commercial Bridging Loans | from 0.89% per month | SME Lending Platform',
       description:
         'Commercial bridging loans from 0.89% per month on commercial, semi-commercial and land. £100k–£10m, up to 75% LTV, unregulated and built for speed.',
     },
@@ -537,7 +537,7 @@ export const products = [
     href: '/products/development-refurbishment/',
     cardPoints: ['Light & heavy refurbishment', 'Build costs funded up front', 'Staged drawdowns'],
     meta: {
-      title: 'Development & Refurbishment Finance | from 0.74% per month | Vantage Lending',
+      title: 'Development & Refurbishment Finance | from 0.74% per month | SME Lending Platform',
       description:
         'Development and refurbishment finance from 0.74% per month. Light and heavy refurbishment, ground-up development, refurb costs funded upfront and staged drawdowns.',
     },
@@ -670,7 +670,7 @@ export const products = [
     href: '/products/bridge-to-let/',
     cardPoints: ['Bridge straight into a longer-term facility', 'One underwriter for the whole journey', 'Refurbishment add-ons'],
     meta: {
-      title: 'Bridge-to-Let & Exit Finance | Vantage Lending',
+      title: 'Bridge-to-Let & Exit Finance | SME Lending Platform',
       description:
         'Bridge-to-let and exit finance from 0.64% per month. Purchase now, steady into a longer-term buy-to-let or commercial mortgage with the same team.',
     },

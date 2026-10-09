@@ -1,0 +1,103 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { invest } from '../../../data/invest.mjs';
+import { site } from '../../../data/site.mjs';
+---
+
+<Base
+  title="Register Interest | SME Lending Platform"
+  description="Register interest in investing — capture your investor type and target amount so you are first to paper when the platform opens."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container" style="max-width:760px;">
+      <span class="eyebrow">Invest · Register</span>
+      <h1>Put your place in the queue</h1>
+      <p class="sub">
+        Registration records your investor type and target amount, nothing more. When the platform opens —
+        subject to authorisation and solicitor sign-off — registered investors are invited in order.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container" style="max-width:760px;">
+      <div class="card">
+        <form id="f-invest">
+          <div class="field-group">
+            <label for="i-type">Investor type</label>
+            <select id="i-type" name="type" required>
+              {invest.categories.map((c) => <option>{c.name}</option>)}
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="i-amount">Target deployment</label>
+            <select id="i-amount" name="amount" required>
+              <option>Under £25,000</option>
+              <option>£25,000 – £100,000</option>
+              <option>£100,000 – £500,000</option>
+              <option>£500,000 – £2,000,000</option>
+              <option>£2,000,000+ (institutional)</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="i-name">Name</label>
+            <input id="i-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+          </div>
+          <div class="field-group">
+            <label for="i-email">Email</label>
+            <input id="i-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          </div>
+          <div class="field-group">
+            <label for="i-phone">Phone (optional)</label>
+            <input id="i-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44 …" />
+          </div>
+          <div class="field-group">
+            <label class="check">
+              <input id="i-cert" name="cert" type="checkbox" required />
+              <span>I confirm my chosen investor type applies to me (self-certification — exact wording pending solicitor sign-off).</span>
+            </label>
+          </div>
+          <div class="field-group">
+            <label class="check">
+              <input id="i-risk" name="risk" type="checkbox" required />
+              <span>I understand capital is at risk: deals can default, returns are projections not guarantees, and an unregulated investment is not covered by the FSCS or the Financial Ombudsman Service.</span>
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%; text-align:center;">Register interest</button>
+        </form>
+        <p class="disclosure" style="margin-top:1.2rem;">{site.investNote}</p>
+        <div id="i-done" hidden>
+          <div class="takeaways">
+            <h3>Got it — you’re on the list</h3>
+            <p>We have noted your investor type and target amount. Nothing is payable, nothing is committed, and we will
+            contact you at <span class="ok"><span id="i-echo"></span></span> only when there is something to talk about.</p>
+          </div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:1.2rem;">
+        Local demo mode: no data leaves this page. Connect a real endpoint in <code>src/data/site.mjs</code> to capture leads.
+        Not sure which category applies? <a href="/invest/eligibility/">Read the three definitions</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.querySelector('#f-invest');
+  const done = document.querySelector('#i-done');
+  const echo = document.querySelector('#i-echo');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    echo.textContent = form.querySelector('#i-email').value;
+    form.hidden = true;
+    done.hidden = false;
+    window.scrollTo({ top: done.offsetTop - 90, behavior: 'smooth' });
+  });
+</script>
+
+<style>
+  .tick-list.list {
+    list-style: none;
+    padding: 0;
+  }
+</style>

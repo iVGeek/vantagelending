@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import Faq from '../../components/Faq.astro';
+import { homeFaqs, faqGroups } from '../../data/faqs.mjs';
+---
+
+<Base
+  title="FAQs | SME Lending Platform"
+  description="Product questions and process questions — what if the valuation comes in low, what if the exit slips, and everything in between."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container" style="max-width:820px;">
+      <span class="eyebrow">Borrow · FAQs</span>
+      <h1>Straight answers, all in one place</h1>
+      <p class="sub">Product questions and process questions — including the awkward ones about valuations and slipping exits.</p>
+      <Faq items={homeFaqs} />
+    </div>
+  </section>
+
+  {faqGroups.map((group) => (
+    <section class="section" style="padding-top:1rem; border-top:1px solid var(--border);">
+      <div class="container" style="max-width:820px;">
+        <span class="eyebrow">{group.group}</span>
+        <h2 style="margin:.3rem 0 1rem;">{group.group}</h2>
+        <Faq items={group.items} />
+      </div>
+    </section>
+  ))}
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="card">
+        <h3 style="margin-top:0;">Still not answered?</h3>
+        <p style="color:var(--muted);">Ask a real underwriter, on the record. Most enquiries get an answer the same working day.</p>
+        <a class="btn btn-primary" href="/contact/">Ask us</a>{' '}
+        <a class="btn btn-ghost" href="/apply/">Start an application</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,14 +1,15 @@
 ﻿---
 import Base from '../../layouts/Base.astro';
 import { site } from '../../data/site.mjs';
+import { invest } from '../../data/invest.mjs';
 ---
 
 <Base
-  title="Legal & Compliance | Vantage Lending"
-  description="Regulatory and legal information for Vantage Lending products."
+  title="Legal & Compliance | SME Lending Platform"
+  description="Regulatory information, terms, privacy and investment risk warnings for SME Lending Platform."
 >
   <section class="hero" style="padding-bottom:1rem;">
-    <div class="container">
+    <div class="container" style="max-width:820px;">
       <span class="eyebrow">Legal &amp; compliance</span>
       <h1>The small print, made big</h1>
       <p class="sub">Placeholder regulatory statement — replace with final wording from your compliance advisers before launch.</p>
@@ -19,12 +20,34 @@ import { site } from '../../data/site.mjs';
     <div class="container" style="max-width:820px;">
       <div class="card" style="margin-bottom:1.4rem;">
         <h2 style="margin-top:0;">Regulation</h2>
-        <p>{site.name} (placeholder, company no. {site.companyNo}) is authorised and regulated by the Financial Conduct Authority as
-          a consumer credit firm under {site.fca}. <b>Commercial finance, including most bridging loans and all business lending,
-          is generally unregulated</b>: these products are not covered by the Financial Ombudsman Service or the Financial Services
-          Compensation Scheme except as required by law.</p>
-        <p>The information on this website is general information only and does not constitute financial advice. Bridging finance
-          normally requires a clear exit strategy.</p>
+        <p>{site.name} (placeholder, {site.companyNo}) is authorised and regulated by the Financial Conduct Authority as a
+          consumer credit firm under {site.fca}. <b>Commercial finance, including most bridging loans and all business lending,
+          is generally unregulated</b>: these products are not covered by the Financial Ombudsman Service or the Financial
+          Services Compensation Scheme except as required by law. {site.ico}.</p>
+        <p>The information on this website is general information only and does not constitute financial advice. Bridging finance normally requires a clear exit strategy.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:1.4rem;">
+        <h2 style="margin-top:0;">Terms of use</h2>
+        <p>By using this site you agree that all rates and figures shown are indicative placeholder pricing, that nothing on
+          the site constitutes an offer or financial advice, and that applications are subject to credit approval and a written
+          offer. Placeholder terms — to be replaced with the final T&amp;Cs.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:1.4rem;">
+        <h2 style="margin-top:0;">Privacy</h2>
+        <p>This site stores a single consent cookie before running any analytics or personalisation scripts, has no advertising
+          cookies and does not sell your data. Form submissions are used solely to respond to you and, where relevant, assess an
+          application or registration. Processing basis, retention and your rights will be set out in the final privacy policy
+          (placeholder).</p>
+      </div>
+
+      <div class="card" style="margin-bottom:1.4rem; border-left:4px solid var(--incorrect);">
+        <h2 style="margin-top:0;">Investment risk warnings</h2>
+        <p>{site.investNote}</p>
+        <ul class="tick-list" style="margin:.4rem 0 0;">
+          {invest.risks.map((r) => <li>{r}</li>)}
+        </ul>
       </div>
 
       <div class="card" style="margin-bottom:1.4rem;">
@@ -32,13 +55,6 @@ import { site } from '../../data/site.mjs';
         <p>Facility £300,000 arranged over 12 months at 0.64% per month (interest-only). Monthly interest £1,920; arrange fee
           £6,000 (2%). Total payable £310,920 including fees. <b>Representative 21.8% APR.</b> Rates vary with LTV, term and risk;
           exact terms are confirmed in a written offer.</p>
-      </div>
-
-      <div class="card" style="margin-bottom:1.4rem;">
-        <h2 style="margin-top:0;">Cookies</h2>
-        <p>This site stores a single consent cookie in your browser before running any analytics or personalisation scripts. You can
-          withdraw or change consent through the banner or your browser settings. The site has no advertising cookies and does not
-          sell your data.</p>
       </div>
 
       <div class="card">

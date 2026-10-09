@@ -1,0 +1,60 @@
+---
+const { compact = false } = Astro.props;
+---
+
+<div id="invest-calc" class="card" style="padding:1.6rem;">
+  <h2 style="margin-top:0;">Investor return calculator</h2>
+  <p style="color:var(--muted); margin-top:0;">Indicative projected return based on deal type. Capital is at risk; nothing is a guarantee.</p>
+
+  <div class="form-field">
+    <label>Instrument</label>
+    <select id="inv-type" style="width:100%;">
+      <option value="9.5">Bridge-to-let — up to 9.5% p.a.</option>
+      <option value="11">Commercial bridging — up to 11% p.a.</option>
+      <option value="8.5">Revenue-based facility — up to 8.5% p.a.</option>
+      <option value="12">Development finance — up to 12% p.a.</option>
+    </select>
+  </div>
+
+  <div class="form-grid">
+    <div class="form-field">
+      <label>Investment <b id="inv-amount-out" style="color:var(--accent-strong);">£100,000</b></label>
+      <input id="inv-amount" type="range" min="25000" max="2000000" step="25000" value="100000" style="width:100%;" />
+    </div>
+    <div class="form-field">
+      <label>Term <b id="inv-term-out" style="color:var(--accent-strong);">12 months</b></label>
+      <input id="inv-term" type="range" min="6" max="60" step="1" value="12" style="width:100%;" />
+    </div>
+  </div>
+
+  <div class="stat-band" style="grid-template-columns:1fr 1fr 1fr; border:0; padding:0; margin-top:.4rem;">
+    <div><span>Indicative annual return</span><b style="display:block; font-size:1.3rem;" id="inv-annual">—</b></div>
+    <div><span>Projected return</span><b style="display:block; font-size:1.3rem;" id="inv-return">—</b></div>
+    <div><span>Projected value at maturity</span><b style="display:block; font-size:1.3rem;" id="inv-value">—</b></div>
+  </div>
+  <p class="note" style="margin-bottom:0;">Plain-vanilla interest projection only — no compounding, no allowance for fees, defaults or early repayment. Returns are indicative, not guaranteed.</p>
+</div>
+
+<script>
+  const money = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+  const el = (id) => document.querySelector(`#invest-calc #${id}`);
+
+  function calc() {
+    const amount = Number(el('inv-amount').value);
+    const months = Number(el('inv-term').value);
+    const rate = Number(el('inv-type').value);
+
+    const annual = amount * (rate / 100);
+    const projected = annual * (months / 12);
+
+    el('inv-amount-out').textContent = money.format(amount);
+    el('inv-term-out').textContent = months + ' months';
+    el('inv-annual').textContent = rate.toFixed(1) + '%';
+    el('inv-return').textContent = money.format(projected);
+    el('inv-value').textContent = money.format(amount + projected);
+  }
+
+  ['inv-amount', 'inv-term', 'inv-type'].forEach((id) => el(id).addEventListener('input', calc));
+
+  calc();
+</script>

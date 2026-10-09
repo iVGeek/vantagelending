@@ -1,0 +1,50 @@
+---
+import Base from '../../../layouts/Base.astro';
+import EligibilityGate from '../../../components/EligibilityGate.astro';
+import InvestCalculator from '../../../components/InvestCalculator.astro';
+import { invest } from '../../../data/invest.mjs';
+import { site } from '../../../data/site.mjs';
+---
+
+<Base
+  title="Investor Return Calculator | SME Lending Platform"
+  description="Mirror the borrower slider: move investment amount and term to see an indicative projected return — behind the eligibility gate."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Invest · Calculator</span>
+      <h1>Slide the amount, watch the return</h1>
+      <p class="sub">
+        The investor’s mirror of the borrower calculator on the Rates page. Indicative projected returns by deal type —
+        shown only to eligible investors, and still not guarantees.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container" style="max-width:760px;">
+      <EligibilityGate
+        intro="Self-certification persists for this browsing session only. Return figures are indicative projections behind the gate to comply with restricted-promotion rules (shape placeholder — needs solicitor sign-off)."
+      >
+        <div hidden>
+          <InvestCalculator />
+          <div class="card" style="margin-top:1.4rem;">
+            <span class="eyebrow">Indicative targets by paper</span>
+            <h3 style="margin:.4rem 0;">What the industry looks like</h3>
+            <table class="data" style="margin-top:.6rem;">
+              <thead>
+                <tr>{invest.returns.rows[0].map((_, i) => <th>{['Instrument', 'Target return', 'Profile'][i]}</th>)}</tr>
+              </thead>
+              <tbody>
+                {invest.returns.rows.map((r) => (
+                  <tr>{r.map((c, i) => (i === 0 ? <td><b>{c}</b></td> : <td>{c}</td>))}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="disclosure" style="margin-top:1rem;">{site.investNote}</p>
+        </div>
+      </EligibilityGate>
+    </div>
+  </section>
+</Base>

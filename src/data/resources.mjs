@@ -224,7 +224,7 @@ export const guides = [
     faqs: [
       { q: 'Can I use revenue-based finance for a one-off purchase?', a: 'Yes — a lump sum is drawn and repaid from future sales. It is best where future revenue is predictable enough to absorb the percentage.' },
     ],
-    related: { label: 'Compare business finance options', href: '/business/' },
+    related: { label: 'Compare business finance options', href: '/compare/' },
   },
   {
     slug: 'landlord-hub-guide',

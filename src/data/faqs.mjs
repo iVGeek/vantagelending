@@ -74,6 +74,14 @@ export const faqGroups = [
         q: 'Are there exit fees or early-repayment charges?',
         a: 'We do not charge exit fees or ERCs on our bridging products, and interest is rebated for unused days after completion.',
       },
+      {
+        q: 'What if the valuation comes in lower than expected?',
+        a: 'The facility is sized against the lower of purchase price and valuation, so a low result reduces the headline amount at the same LTV. We surface this early and rebase the figures for you — we never stretch a risk that does not stack up.',
+      },
+      {
+        q: 'What happens if my exit slips beyond the term?',
+        a: 'Tell your underwriter as soon as it looks likely. A named underwriter holds your case, so an extension is a conversation rather than a reapplication — priced transparently, with no exit fee and no ERC on our products.',
+      },
     ],
   },
   {

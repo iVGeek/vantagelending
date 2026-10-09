@@ -7,20 +7,45 @@ import { site } from '../data/site.mjs';
     <div class="footer-top">
       <div>
         <div class="brand">
-          <span class="brand-mark">VL</span>
-          <span class="brand-name">Vantage Lending</span>
+          <span class="brand-mark">{site.shortName}</span>
+          <span class="brand-name">SME Lending Platform</span>
         </div>
         <p class="disclosure" style="max-width:46ch;">{site.footerNote}</p>
       </div>
       <div class="footer-cols">
         <div>
-          <h4>Loans</h4>
+          <h4>Borrow</h4>
           <ul>
             <li><a href="/products/">All products</a></li>
             <li><a href="/products/unsecured-business-loans/">Unsecured business loans</a></li>
             <li><a href="/products/residential-bridging/">Residential bridging</a></li>
             <li><a href="/products/commercial-bridging/">Commercial bridging</a></li>
             <li><a href="/rates/">Rates</a></li>
+            <li><a href="/compare/">Compare</a></li>
+            <li><a href="/apply/">Apply</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Invest</h4>
+          <ul>
+            <li><a href="/invest/">Invest overview</a></li>
+            <li><a href="/invest/how-it-works/">How it works</a></li>
+            <li><a href="/invest/deals/">Live deals</a></li>
+            <li><a href="/invest/calculator/">Return calculator</a></li>
+            <li><a href="/invest/eligibility/">Eligibility</a></li>
+            <li><a href="/invest/institutional/">Institutional &amp; family office</a></li>
+            <li><a href="/invest/register/">Register interest</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="/learn/">All guides</a></li>
+            <li><a href="/learn/glossary/">Glossary</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/eligibility/">Eligibility &amp; exclusions</a></li>
+            <li><a href="/documents/">Document checklist</a></li>
+            <li><a href="/faqs/">FAQs</a></li>
           </ul>
         </div>
         <div>
@@ -28,14 +53,13 @@ import { site } from '../data/site.mjs';
           <ul>
             <li><a href="/about/">About</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="/apply/">Apply</a></li>
             <li><a href="/legal/">Legal &amp; compliance</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      {site.phone} · {site.email} · {site.address} · {site.hours}
+      {site.phone} · {site.email} · {site.address} · {site.companyNo} · {site.ico}
     </div>
   </div>
 </footer>
@@ -49,7 +73,7 @@ import { site } from '../data/site.mjs';
 
   .footer-top {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.3fr 2fr;
     gap: 2rem;
     padding: 2.5rem 0 1.5rem;
   }
@@ -71,7 +95,7 @@ import { site } from '../data/site.mjs';
 
   .footer-cols {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.5rem;
   }
 
@@ -94,7 +118,7 @@ import { site } from '../data/site.mjs';
     padding: 0.22rem 0;
     text-decoration: none;
     color: var(--ink);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 
   .footer-cols a:hover {
@@ -108,8 +132,18 @@ import { site } from '../data/site.mjs';
     font-size: 0.85rem;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 900px) {
     .footer-top {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-cols {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-cols {
       grid-template-columns: 1fr;
     }
   }

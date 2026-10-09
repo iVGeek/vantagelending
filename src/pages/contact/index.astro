@@ -4,8 +4,8 @@ import { site } from '../../data/site.mjs';
 ---
 
 <Base
-  title="Contact | Vantage Lending"
-  description="Contact Vantage Lending about a facility or an existing case."
+  title="Contact | SME Lending Platform"
+  description="Contact us about a facility, an existing case, or investing."
 >
   <section class="hero" style="padding-bottom:1rem;">
     <div class="container">
@@ -53,6 +53,7 @@ import { site } from '../../data/site.mjs';
                   <option>Business finance</option>
                   <option>Bridging</option>
                   <option>Development / refinance</option>
+                  <option>Investing</option>
                   <option>Existing case</option>
                   <option>Other</option>
                 </select>
@@ -64,7 +65,7 @@ import { site } from '../../data/site.mjs';
             </div>
             <label class="consent" style="margin:0.6rem 0 1rem;">
               <input type="checkbox" required />
-              <span>I agree Vantage Lending may use the details above to respond and, if relevant, assess an application.</span>
+              <span>I agree SME Lending Platform may use the details above to respond and, if relevant, assess an application or interest.</span>
             </label>
             <button class="btn btn-dark" type="submit" style="width:100%;">Send message</button>
           </form>
@@ -99,11 +100,11 @@ import { site } from '../../data/site.mjs';
         if (!res.ok) throw new Error('endpoint error');
       } catch (err) {
         btn.disabled = false;
-        alert('The form could not be sent. Please email hello@vantagelending.co.uk instead.');
+        alert('The form could not be sent. Please email hello@smelending.co.uk instead.');
         return;
       }
     } else {
-      console.warn('[Vantage] No formEndpoint set in src/data/site.mjs — showing local success state only.');
+      console.warn('[SLP] No formEndpoint set in src/data/site.mjs — showing local success state only.');
     }
     form.hidden = true;
     success.hidden = false;

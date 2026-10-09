@@ -1,0 +1,62 @@
+---
+const { intro = 'Investment opportunities on this platform are restricted.' } = Astro.props;
+---
+
+<div class="gate" data-gate>
+  <div class="card">
+    <h3 style="margin-top:0;">Before we show you the numbers</h3>
+    <p class="disclosure">
+      Without FCA authorisation we cannot promote investment opportunities to the public. To see actual deal terms and return
+      figures, you must first self-certify that you are a high-net-worth, sophisticated or institutional investor. This gate is a
+      shape placeholder — the exact gating logic and wording needs solicitor sign-off before launch.
+    </p>
+    <p style="color:var(--muted); font-size:0.95rem;">Tick every statement that applies to you:</p>
+    <label class="consent" style="margin:0.5rem 0;">
+      <input type="checkbox" data-cert="hnw" />
+      <span>I am a <b>high-net-worth</b> individual — net income of £100,000+ a year, or net assets of £250,000+ (excluding pension and principal residence).</span>
+    </label>
+    <label class="consent" style="margin:0.5rem 0;">
+      <input type="checkbox" data-cert="soph" />
+      <span>I am a certified <b>sophisticated investor</b> — a member of a recognised VC/angel network, or holder of a relevant professional certificate.</span>
+    </label>
+    <label class="consent" style="margin:0.5rem 0;">
+      <input type="checkbox" data-cert="inst" />
+      <span>I am an <b>institutional or business investor</b> — a corporate body, trust, fund, pension scheme or partnership investing on behalf of others.</span>
+    </label>
+    <label class="consent" style="margin:1rem 0;">
+      <input type="checkbox" data-cert="agree" required />
+      <span>I confirm I am not relying on any promotion on this site being financial advice, and I understand that capital is at risk and returns are indicative only.</span>
+    </label>
+    <button class="btn btn-primary" type="button" data-gate-open style="width:100%;">Confirm my status and continue</button>
+  </div>
+  <p class="disclosure" style="margin-bottom:0;">{intro}</p>
+</div>
+
+<slot />
+
+<script>
+  const STORAGE_KEY = 'slp-invest-gate';
+  const gate = document.querySelector('[data-gate]');
+  if (gate) {
+    const content = gate.nextElementSibling;
+
+    const reveal = () => {
+      gate.hidden = true;
+      if (content) content.hidden = false;
+    };
+
+    if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+      reveal();
+    } else {
+      gate.querySelector('[data-gate-open]').addEventListener('click', () => {
+        const certs = Array.from(gate.querySelectorAll('input[data-cert]')).filter((i) => i.dataset.cert !== 'agree');
+        if (!certs.some((c) => c.checked) || !gate.querySelector('[data-cert="agree"]').checked) {
+          alert('Please tick at least one investor category and confirm you understand the risks.');
+          return;
+        }
+        sessionStorage.setItem(STORAGE_KEY, '1');
+        reveal();
+      });
+    }
+  }
+</script>

@@ -1,0 +1,54 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { site } from '../../../data/site.mjs';
+---
+
+<Base
+  title="Institutional & Family Office | SME Lending Platform"
+  description="Bespoke lending mandates and investment notes for family offices, funds, pension schemes and institutional capital."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Invest · Institutional</span>
+      <h1>For family offices, funds and institutions</h1>
+      <p class="sub">
+        Larger tickets, bespoke mandate terms and a direct relationship to the lending book — not a dashboard.
+        Typically £2m+ deployed across a book, on terms agreed with us directly.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="grid-articles" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card">
+          <span class="eyebrow">Mandates</span>
+          <h3 style="margin:.5rem 0;">Bespoke notes</h3>
+          <p style="color:var(--muted); font-size:.95rem;">Single-name, portfolio or geographic mandates across bridge-to-let, commercial bridging and development paper, structured to your risk parameters.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Direct line</span>
+          <h3 style="margin:.5rem 0;">Relationship, not a portal</h3>
+          <p style="color:var(--muted); font-size:.95rem;">One named contact who knows your mandate and brings you deals before they go to the wider register.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Insight</span>
+          <h3 style="margin:.5rem 0;">Book-level data</h3>
+          <p style="color:var(--muted); font-size:.95rem;">Origination volume, default history and vintage analysis shared under NDA — the reporting an institution can actually underwrite against.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1.6rem;">
+        <h3 style="margin-top:0;">What we can discuss today</h3>
+        <p style="color:var(--muted);">
+          The current structure is pre-authorisation: we can talk through the model, share illustrative deal shapes and capture a
+          confidential note of your mandate, but there is no live investment to place yet. When authorised, registered institutions
+          are invited to paper in order of registration.
+        </p>
+        <div style="margin-top:1rem;">
+          <a class="btn btn-primary" href="/contact/">Talk to the team</a>{' '}
+          <a class="btn btn-ghost" href={`mailto:${site.email}?subject=Institutional%20mandate`}>Email {site.email}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

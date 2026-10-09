@@ -1,0 +1,42 @@
+---
+import Base from '../../../layouts/Base.astro';
+import EligibilityGate from '../../../components/EligibilityGate.astro';
+import DealCard from '../../../components/DealCard.astro';
+import { deals } from '../../../data/deals.mjs';
+import { site } from '../../../data/site.mjs';
+---
+
+<Base
+  title="Live Deals | SME Lending Platform"
+  description="Placeholder live deals across bridge-to-let, commercial bridging, revenue-based facilities and development finance — gated for eligible investors."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Invest · Live deals</span>
+      <h1>Deals in funding</h1>
+      <p class="sub">
+        Deal type, security, LTV, term, target return and funding progress — on the table, not behind a call.
+        Deals are placeholder illustrations until real underwriting exists.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <EligibilityGate
+        intro="Self-certification persists for this browsing session only. Deal terms and return figures are visible after the gate to comply with restricted-promotion rules (shape placeholder — needs solicitor sign-off)."
+      >
+        <div hidden>
+          <div class="grid-deals">
+            {deals.map((d) => <DealCard deal={d} />)}
+          </div>
+          <p class="note" style="margin-top:1.4rem;">All four deals are placeholder illustrations with indicative progress and returns. Nothing here is an offer and nothing can be committed to. {site.investNote}</p>
+          <div style="margin-top:1.4rem;">
+            <a class="btn btn-primary" href="/invest/calculator/">Model a return</a>{' '}
+            <a class="btn btn-ghost" href="/invest/register/">Register interest</a>
+          </div>
+        </div>
+      </EligibilityGate>
+    </div>
+  </section>
+</Base>

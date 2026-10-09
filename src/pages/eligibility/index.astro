@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import { eligibility } from '../../data/eligibility.mjs';
+---
+
+<Base
+  title="Eligibility & Exclusions | SME Lending Platform"
+  description="Who we lend to, what we need to see, and the exclusions we are upfront about — the plain-English version."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Borrow · Eligibility</span>
+      <h1>Who we lend to — and what we don’t</h1>
+      <p class="sub">A soft first check, and honest exclusions. Better to know on page one than after six weeks of chasing.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container" style="max-width:820px;">
+      {eligibility.overview.map((p) => <p style="color:var(--muted);">{p}</p>)}
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="grid-cases" style="grid-template-columns:1fr 1fr; align-items:start;">
+        {eligibility.basics.map((b) => (
+          <div class="card">
+            <span class="eyebrow">{b.label}</span>
+            <ul class="tick-list" style="margin:0.6rem 0 0;">
+              {b.items.map((i) => <li>{i}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="card" style="border-left:4px solid var(--incorrect);">
+        <span class="eyebrow">{eligibility.excluded.heading}</span>
+        <h2 style="margin:.4rem 0 .6rem;">Straight exclusions</h2>
+        <p style="color:var(--muted);">{eligibility.excluded.intro}</p>
+        <ul class="tick-list" style="margin:0.6rem 0 0;">
+          {eligibility.excluded.items.map((i) => <li style="padding-left:0; margin-bottom:.5rem;">✕&nbsp;&nbsp;{i}</li>)}
+        </ul>
+      </div>
+      <div style="margin-top:1.6rem;">
+        <a class="btn btn-primary" href="/documents/">See the document checklist</a>{' '}
+        <a class="btn btn-ghost" href="/apply/">Start an application</a>
+      </div>
+    </div>
+  </section>
+</Base>

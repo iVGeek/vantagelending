@@ -4,14 +4,14 @@ import { site } from '../../data/site.mjs';
 ---
 
 <Base
-  title="About | Vantage Lending"
-  description="Vantage Lending is a direct lender built around published prices, named underwriters and property and business finance without the fine print."
+  title="About | SME Lending Platform"
+  description="SME Lending Platform is a direct lender and invest platform built around published prices, named underwriters and honest current regulatory status."
 >
   <section class="hero" style="padding-bottom:1rem;">
     <div class="container">
       <span class="eyebrow">About</span>
-      <h1>A lender that prices like a retailer</h1>
-      <p class="sub">{site.tagline} We publish the price list, put a named underwriter on your case and charge nothing to come and go.</p>
+      <h1>A lender that prices like a retailer — and a platform that says what it is</h1>
+      <p class="sub">{site.tagline} We publish the price list, put a named underwriter on your case, and charge nothing to come and go.</p>
     </div>
   </section>
 
@@ -28,23 +28,64 @@ import { site } from '../../data/site.mjs';
   <section class="section" style="padding-top:1rem;">
     <div class="container" style="max-width:820px;">
       <div class="section-head">
-        <span class="eyebrow">What we’re for</span>
-        <h2>Property finance and business finance need different honesty</h2>
+        <span class="eyebrow">Story</span>
+        <h2>The founder’s view</h2>
       </div>
       <p style="color:var(--muted);">
-        Property bridging runs best with one person who knows the file from bid to completion. Business finance runs best
-        when the cost is agreed in writing before a single document is requested.
+        This platform exists because the market is split: SME borrowers get the summary page and then the phone call,
+        and investors get told about “alternative assets” with no view of the actual lending. We build the whole table —
+        published prices on one side, transparent deal-by-deal lending on the other — and let both sides see the same numbers.
       </p>
+      <p style="color:var(--muted);">
+        The build is a working placeholder: rates are indicative market ranges, and the invest side is restricted and
+        pre-authorisation. That honesty is the point of the platform.
+      </p>
+      <h3 style="margin-top:1.5rem;">How we work</h3>
       <ul class="tick-list">
         <li>Rates published and honoured — what the page says is what the offer says.</li>
-        <li>A named underwriter from enquiry through to completion.</li>
+        <li>A named underwriter from enquiry through to completion on every property case.</li>
         <li>No exit fees, no ERC and no application charges on business facilities.</li>
         <li>Decisions in days: business finance funds in 24–48 hours on quick decisions.</li>
       </ul>
       <div style="margin-top:1.6rem;">
-        <a class="btn btn-primary" href="/products/">See the products</a> {''}
+        <a class="btn btn-primary" href="/products/">See the products</a>{' '}
         <a class="btn btn-ghost" href="/contact/">Get in touch</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--border); padding-top:2.5rem;">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head">
+        <span class="eyebrow">Trust &amp; regulation</span>
+        <h2>Our honest current status</h2>
+      </div>
+      <div class="card" style="margin-bottom:1rem;">
+        <h3 style="margin-top:0;">Company</h3>
+        <ul class="tick-list" style="margin:0;">
+          <li>{site.name} (placeholder) — {site.companyNo}</li>
+          <li>{site.ico}</li>
+          <li>{site.address}</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-bottom:1rem;">
+        <h3 style="margin-top:0;">What we are authorised for</h3>
+        <p style="color:var(--muted); margin:0;">
+          Planned FCA authorisation as a consumer credit firm under {site.fca}. Regulated consumer credit and regulated
+          residential bridging (your main home) sit inside those permissions. <b>Commercial and most business finance, and all
+          investment activity, are unregulated or restricted</b> and are not covered by the Financial Ombudsman Service or the
+          Financial Services Compensation Scheme except as required by law.
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;">What we are not yet</h3>
+        <p style="color:var(--muted); margin:0;">
+          We are not authorised to hold client money, and we do not promote investments to the public — the invest side
+          is gated and pre-launch. The exact regulatory position, gating and wording need legal input before anything
+          goes live. This page will state plainly what changes when that happens.
+        </p>
+      </div>
+      <p class="disclosure" style="margin-top:1.4rem;">{site.footerNote}</p>
     </div>
   </section>
 </Base>

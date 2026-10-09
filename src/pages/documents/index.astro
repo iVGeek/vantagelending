@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { documents } from '../../data/eligibility.mjs';
+---
+
+<Base
+  title="Document Checklist | SME Lending Platform"
+  description="Exactly what to send us for business finance or bridging — each item explained in plain English, nothing more."
+>
+  <section class="hero" style="padding-bottom:1rem;">
+    <div class="container">
+      <span class="eyebrow">Borrow · Documents</span>
+      <h1>Here’s exactly what to send us</h1>
+      <p class="sub">No data requests for sport. Each item below exists for a reason we will tell you up front.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;">
+    <div class="container">
+      <div class="grid-products" style="grid-template-columns:1fr 1fr; align-items:start;">
+        {Object.values(documents).map((docs) => (
+          <div>
+            <span class="eyebrow">{docs.label}</span>
+            <h2 style="margin:.4rem 0 .4rem;">Checklist</h2>
+            <p style="color:var(--muted); margin:0 0 1rem;">{docs.intro}</p>
+            <div>
+              {docs.items.map((it) => (
+                <div class="card" style="margin-bottom:.9rem;">
+                  <h3 style="margin:0 0 .3rem; font-size:1.05rem;">{it.what}</h3>
+                  <p style="color:var(--muted); margin:0; font-size:.95rem;">{it.why}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style="margin-top:.6rem; max-width:820px;">
+        <p class="note">Source-of-funds and ID checks are required by law on every secured case — that is not negotiable, not a preference.</p>
+        <div style="margin-top:1.4rem;">
+          <a class="btn btn-primary" href="/apply/">Start an application</a>{' '}
+          <a class="btn btn-ghost" href="/contact/">Ask what applies to you</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
