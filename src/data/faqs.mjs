@@ -13,7 +13,7 @@ export const homeFaqs = [
   },
   {
     q: 'What are the fees — and are there exit fees or ERCs?',
-    a: 'We publish our fee schedule openly. We charge an arrangement fee and standard legal/valuation costs. We do not charge exit fees or early-repayment charges on our products.',
+    a: 'We publish our fee schedule openly. We charge an arrangement fee and standard legal/valuation costs. We do not charge exit fees or early repayment charges on our products.',
   },
   {
     q: 'What do I need to provide?',
@@ -56,7 +56,7 @@ export const faqGroups = [
     items: [
       {
         q: 'What is the difference between regulated and unregulated bridging?',
-        a: 'Bridging secured on your main residential home is regulated by the FCA. Commercial, semi-commercial and certain portfolio or second-charge routes are unregulated. We confirm which applies to you in writing.',
+        a: 'Bridging secured on your main residential home is regulated by the FCA. Commercial, semi commercial and certain portfolio or second charge routes are unregulated. We confirm which applies to you in writing.',
       },
       {
         q: 'How much can I borrow and at what LTV?',
@@ -71,7 +71,7 @@ export const faqGroups = [
         a: 'Talk to us early. Extensions and refinancing are handled by the same underwriter who did the original case, and renewals are priced transparently.',
       },
       {
-        q: 'Are there exit fees or early-repayment charges?',
+        q: 'Are there exit fees or early repayment charges?',
         a: 'We do not charge exit fees or ERCs on our bridging products, and interest is rebated for unused days after completion.',
       },
       {
@@ -134,8 +134,8 @@ export const faqGroups = [
         a: 'Email or call us and the same underwriter-led team will confirm interest to date, any rebate due, and the exact settlement amount, usually the same day.',
       },
       {
-        q: 'Can I request a top-up on an existing facility?',
-        a: 'Yes. Revenue-based top-ups are typically same-day. For bridging, further advances are considered against the improved position of the case.',
+        q: 'Can I request a top up on an existing facility?',
+        a: 'Yes. Revenue-based top ups are typically same day. For bridging, further advances are considered against the improved position of the case.',
       },
       {
         q: 'How do I make a complaint?',

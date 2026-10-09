@@ -7,8 +7,8 @@ export const invest = {
     },
     {
       n: '2',
-      title: 'Self-certify',
-      copy: 'Investment promotion is restricted while we are unregulated, so you must self-certify as high-net-worth, sophisticated or institutional before you see actual deal terms or return figures.',
+      title: 'Self certify',
+      copy: 'Investment promotion is restricted while we are unregulated, so you must self certify as high net worth, sophisticated or institutional before you see actual deal terms or return figures.',
     },
     {
       n: '3',
@@ -23,9 +23,9 @@ export const invest = {
   ],
   categories: [
     {
-      name: 'High-net-worth',
+      name: 'High net worth',
       def: 'An individual with net income of £100,000+ a year, or net assets of £250,000+, excluding pension and principal residence.',
-      tags: ['Self-certified for the fixed term of any deal', 'Applies to individuals'],
+      tags: ['Self certified for the fixed term of any deal', 'Applies to individuals'],
     },
     {
       name: 'Sophisticated',
@@ -41,9 +41,9 @@ export const invest = {
   returns: {
     lead: 'Indicative target returns by the kind of paper, before costs. These are projections, not guarantees.',
     rows: [
-      ['Bridge-to-let', 'up to 9.5% p.a.', 'First-charge paper, 12 months'],
-      ['Commercial bridging', 'up to 11% p.a.', 'First-charge paper, 9–12 months'],
-      ['Revenue-based facilities', 'up to 8.5% p.a. equivalent', 'Unsecured, sales-linked'],
+      ['Bridge-to-let', 'up to 9.5% p.a.', 'First charge paper, 12 months'],
+      ['Commercial bridging', 'up to 11% p.a.', 'First charge paper, 9–12 months'],
+      ['Revenue-based facilities', 'up to 8.5% p.a. equivalent', 'Unsecured, sales linked'],
       ['Development finance', 'up to 12% p.a.', '55% of GDV, 24 months'],
     ],
   },

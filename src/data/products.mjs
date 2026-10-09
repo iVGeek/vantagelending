@@ -41,8 +41,8 @@ export const products = [
       heading: 'Built with the borrower in mind',
       items: [
         'Daily accrual — pay interest only for the days you actually use',
-        'No early-repayment fees, ever',
-        'Soft eligibility check at application; no credit-score footprint',
+        'No early repayment fees, ever',
+        'Soft eligibility check at application; no credit score footprint',
         'Open Banking link or 12 months of statements — nothing more',
         'A named underwriter, not a call centre',
       ],
@@ -73,7 +73,7 @@ export const products = [
       heading: 'Fee schedule',
       items: [
         'No application fee',
-        'No early-repayment charge',
+        'No early repayment charge',
         'No brokerage fee when you deal with us directly',
         'No hidden charges — set out in writing before you sign',
       ],
@@ -126,7 +126,7 @@ export const products = [
       },
       {
         q: 'Can I repay early?',
-        a: 'Yes, at any time, and there is no early-repayment fee. Interest accrues daily, so you only pay for the days you use.',
+        a: 'Yes, at any time, and there is no early repayment fee. Interest accrues daily, so you only pay for the days you use.',
       },
     ],
   },
@@ -138,17 +138,17 @@ export const products = [
     band: 'up to £2m',
     term: 'repay as % of sales',
     href: '/products/revenue-based-finance/',
-    cardPoints: ['Repay when customers pay you', 'No fixed monthly payment', 'Same-day top-ups available'],
+    cardPoints: ['Repay when customers pay you', 'No fixed monthly payment', 'Same day top ups available'],
     meta: {
       title: 'Revenue-Based Finance | Repay from Card Sales | SME Lending Platform',
       description:
-        'Revenue-based finance repaid as a small, fixed percentage of your future card and online sales. No fixed monthly payments, no fixed term, top-ups from day one.',
+        'Revenue-based finance repaid as a small, fixed percentage of your future card and online sales. No fixed monthly payments, no fixed term, top ups from day one.',
     },
     hero: {
       eyebrow: 'Revenue-based finance',
-      h1: 'One all-inclusive cost. You repay when customers pay you.',
-      sub: 'Funding for card-taking businesses, repaid as a small percentage of future sales. No fixed monthlies, no hidden extras — just a single, agreed cost that never changes.',
-      note: 'No fixed monthly payment · No APR or compounding · Top-ups as soon as you repay',
+      h1: 'One total cost. You repay when customers pay you.',
+      sub: 'Funding for card taking businesses, repaid as a small percentage of future sales. No fixed monthlies, no hidden extras — just a single, agreed cost that never changes.',
+      note: 'No fixed monthly payment · No APR or compounding · Top ups as soon as you repay',
     },
     stats: [
       { value: 'single fixed cost', label: 'topped up, never compounding' },
@@ -158,12 +158,12 @@ export const products = [
     ],
     useCases: {
       eyebrow: 'What it’s for',
-      heading: 'Built for card-taking businesses',
+      heading: 'Built for card taking businesses',
       items: [
         'Retail, hospitality and online sellers with regular card or digital sales',
         'Seasonal businesses that need repayment to flex with trading',
         'Rapid stock-tops and marketing pushes ahead of peaks',
-        'Franchises and multi-site operators with predictable turnover',
+        'Franchises and multi site operators with predictable turnover',
         'Businesses that find fixed daily loan repayments too rigid',
       ],
     },
@@ -173,9 +173,9 @@ export const products = [
       items: [
         'You repay a small, fixed percentage of monthly card and online takings',
         'No fixed monthly amount — quiet months mean smaller payments',
-        'One all-inclusive cost agreed up front; no interest, no compounding',
+        'One total cost agreed up front; no interest, no compounding',
         'No fixed term — the length flexes with your sales',
-        'Once repaid, further top-ups are typically available the same day',
+        'Once repaid, further top ups are typically available the same day',
       ],
     },
     rates: {
@@ -197,7 +197,7 @@ export const products = [
         'Weighted by card, terminal or online sales volume, not just credit score',
         'Most funding decisions run off your sales data — no business plan required',
         'Advance typically sized against monthly card turnover',
-        'Same-day top-ups available once part of the facility is repaid',
+        'Same day top ups available once part of the facility is repaid',
       ],
     },
     fees: {
@@ -205,7 +205,7 @@ export const products = [
       items: [
         'One fixed cost in writing before you sign — never changes',
         'No interest or compounding',
-        'No fixed-term penalty',
+        'No fixed term penalty',
         'No administration charges',
       ],
     },
@@ -231,7 +231,7 @@ export const products = [
         },
         {
           n: '2',
-          title: 'See your all-in cost',
+          title: 'See your total cost',
           copy: 'We present one figure: the advance and the fixed cost to repay it. Nothing else gets added.',
         },
         {
@@ -257,7 +257,7 @@ export const products = [
       },
       {
         q: 'Can I get more funding?',
-        a: 'Yes. Once a portion of the facility is repaid, same-day top-ups are typically available without re-brokering the whole deal.',
+        a: 'Yes. Once a portion of the facility is repaid, same day top ups are typically available without renegotiating the whole deal.',
       },
     ],
   },
@@ -269,7 +269,7 @@ export const products = [
     band: '£50k–£10m',
     term: 'up to 24 months',
     href: '/products/residential-bridging/',
-    cardPoints: ['Chain-break, auction & capital raising', 'Up to 75% LTV', 'No ERC or exit fees'],
+    cardPoints: ['Chain break, auction & capital raising', 'Up to 75% LTV', 'No ERC or exit fees'],
     meta: {
       title: 'Residential Bridging Loans | from 0.64% per month | SME Lending Platform',
       description:
@@ -283,7 +283,7 @@ export const products = [
     },
     stats: [
       { value: 'from 0.64%', label: 'per month, by LTV band' },
-      { value: '75%', label: 'maximum loan-to-value' },
+      { value: '75%', label: 'maximum loan to value' },
       { value: '£50k–£10m', label: 'loan range' },
       { value: '24 months', label: 'maximum term' },
     ],
@@ -292,7 +292,7 @@ export const products = [
       heading: 'Typical use cases',
       items: [
         'Breaking a chain to complete your purchase without losing the property',
-        'Moving on an auction or part-exchange property while your current sale closes',
+        'Moving on an auction or part exchange property while your current sale closes',
         'Capital raising on a property you own',
         'Downsizing, divorce or probate where timing matters',
         'Light to heavy refurbishment before sale, refinance or rent',
@@ -302,17 +302,17 @@ export const products = [
       eyebrow: 'Why borrowers choose us',
       heading: 'Built like the lenders who win this market',
       items: [
-        'One named underwriter from enquiry to completion — no hand-offs',
-        'No exit fee and no early-repayment charge, ever',
+        'One named underwriter from enquiry to completion — no hand offs',
+        'No exit fee and no early repayment charge, ever',
         'Daily interest, so you pay only for the days you use',
         'Serviced, retained or rolled interest as your cash flow prefers',
-        'Commercial and second-charge options on the same facility',
+        'Commercial and second charge options on the same facility',
       ],
     },
     rates: {
-      lead: 'First charge, residential property. Rates are fixed for the term by loan-to-value band.',
+      lead: 'First charge, residential property. Rates are fixed for the term by loan to value band.',
       table: {
-        columns: ['Loan-to-value', 'Rate per month (first charge)', 'Notes'],
+        columns: ['Loan to value', 'Rate per month (first charge)', 'Notes'],
         rows: [
           ['Up to 55%', '0.64%', 'Fast Track / AVM cases welcome'],
           ['Up to 65%', '0.69%', 'Full valuation usually required'],
@@ -326,7 +326,7 @@ export const products = [
       items: [
         'Minimum loan £50,000; maximum £10,000,000',
         'Terms from 3 to 24 months',
-        'Residential, semi-commercial and portfolio property accepted',
+        'Residential, semi commercial and portfolio property accepted',
         'Regulated bridging capped at 70% LTV; up to 75% unregulated where eligible',
         'Full, AV and desktop valuations used where appropriate',
       ],
@@ -360,11 +360,11 @@ export const products = [
         {
           n: '1',
           title: 'Send a quick enquiry',
-          copy: 'Tell us the property, purchase price or value, and your exit strategy — by phone, email, or the one-page form. No credit impact.',
+          copy: 'Tell us the property, purchase price or value, and your exit strategy — by phone, email, or the one page form. No credit impact.',
         },
         {
           n: '2',
-          title: 'Credit-backed terms in hours',
+          title: 'Credit-approved terms in hours',
           copy: 'A dedicated underwriter owns your case and returns indicative terms in as little as one hour when criteria are met.',
         },
         {
@@ -386,11 +386,11 @@ export const products = [
       },
       {
         q: 'Can I use bridging to break a chain?',
-        a: 'Yes — chain-break and onward-purchase bridging is one of the most common uses. We include an exit strategy (usually the onward sale or refinance) in the underwriting assessment.',
+        a: 'Yes — chain break and onward purchase bridging is one of the most common uses. We include an exit strategy (usually the onward sale or refinance) in the underwriting assessment.',
       },
       {
         q: 'What does the fee schedule include?',
-        a: 'A 2% arrangement fee plus standard valuation and legal costs. There is no exit fee and no early-repayment charge, and interest is rebated for any unused days after completion.',
+        a: 'A 2% arrangement fee plus standard valuation and legal costs. There is no exit fee and no early repayment charge, and interest is rebated for any unused days after completion.',
       },
     ],
   },
@@ -402,21 +402,21 @@ export const products = [
     band: '£100k–£10m',
     term: 'up to 24 months',
     href: '/products/commercial-bridging/',
-    cardPoints: ['Commercial, semi-commercial & land', 'Up to 75% LTV', 'Dual representation available'],
+    cardPoints: ['Commercial, semi commercial & land', 'Up to 75% LTV', 'Dual representation available'],
     meta: {
       title: 'Commercial Bridging Loans | from 0.89% per month | SME Lending Platform',
       description:
-        'Commercial bridging loans from 0.89% per month on commercial, semi-commercial and land. £100k–£10m, up to 75% LTV, unregulated and built for speed.',
+        'Commercial bridging loans from 0.89% per month on commercial, semi commercial and land. £100k–£10m, up to 75% LTV, unregulated and built for speed.',
     },
     hero: {
       eyebrow: 'Commercial bridging',
       h1: 'Commercial property deals, funded at pace',
-      sub: 'Bridging for commercial, semi-commercial, mixed-use and land from £100k–£10m. Rates from 0.89% per month, dual representation available, and unregulated so speed stays in your hands.',
+      sub: 'Bridging for commercial, semi commercial, mixed use and land from £100k–£10m. Rates from 0.89% per month, dual representation available, and unregulated so speed stays in your hands.',
       note: 'Unregulated bridging · Dual representation · Decisions in hours',
     },
     stats: [
       { value: 'from 0.89%', label: 'per month, by LTV band' },
-      { value: '75%', label: 'maximum loan-to-value' },
+      { value: '75%', label: 'maximum loan to value' },
       { value: '£100k–£10m', label: 'loan range' },
       { value: '24 months', label: 'maximum term' },
     ],
@@ -424,11 +424,11 @@ export const products = [
       eyebrow: 'What it’s for',
       heading: 'Typical use cases',
       items: [
-        'Buying commercial or mixed-use property at auction or through the market',
+        'Buying commercial or mixed use property at auction or through the market',
         'Refinancing an existing commercial position with speed',
         'Capital raising against trading property and land',
-        'Purchasing or converting semi-commercial premises for owner occupation',
-        'Acting where a longer-term lender is ready but moving too slowly',
+        'Purchasing or converting semi commercial premises for owner occupation',
+        'Acting where a longer term lender is ready but moving too slowly',
       ],
     },
     benefits: {
@@ -443,23 +443,23 @@ export const products = [
       ],
     },
     rates: {
-      lead: 'First charge, commercial and semi-commercial property. Rates fixed for the term by LTV band.',
+      lead: 'First charge, commercial and semi commercial property. Rates fixed for the term by LTV band.',
       table: {
-        columns: ['Loan-to-value', 'Rate per month (first charge)', 'Notes'],
+        columns: ['Loan to value', 'Rate per month (first charge)', 'Notes'],
         rows: [
-          ['Up to 65%', '0.89%', 'Commercial & semi-commercial'],
+          ['Up to 65%', '0.89%', 'Commercial & semi commercial'],
           ['Up to 70%', '0.95%', 'Mixed-use and trading property'],
           ['Up to 75%', '0.99%', 'Land and higher-LTV positions'],
         ],
       },
-      note: 'Second-charge pricing is slightly higher. Minimum loan £100,000; larger facilities considered by referral.',
+      note: 'Second charge pricing is slightly higher. Minimum loan £100,000; larger facilities considered by referral.',
     },
     criteria: {
       heading: 'Key criteria',
       items: [
         'Minimum loan £100,000; maximum £10,000,000',
         'Terms from 3 to 24 months',
-        'Commercial, semi-commercial, mixed-use and land accepted',
+        'Commercial, semi commercial, mixed use and land accepted',
         'Up to 75% LTV depending on asset and route',
         'Full or desktop valuations used case by case',
       ],
@@ -493,7 +493,7 @@ export const products = [
         {
           n: '1',
           title: 'Submit the deal',
-          copy: 'Via the one-page form, a broker, or a call. Tell us the asset, the purchase or value, and the exit.',
+          copy: 'Via the one page form, a broker, or a call. Tell us the asset, the purchase or value, and the exit.',
         },
         {
           n: '2',
@@ -515,7 +515,7 @@ export const products = [
     faqs: [
       {
         q: 'Is commercial bridging regulated?',
-        a: 'No — commercial and semi-commercial bridging is an unregulated product under FCA rules, so that route is not FCA regulated. That keeps the process faster and simpler, and we say so in writing.',
+        a: 'No — commercial and semi commercial bridging is an unregulated product under FCA rules, so that route is not FCA regulated. That keeps the process faster and simpler, and we say so in writing.',
       },
       {
         q: 'Can an intermediary represent both sides?',
@@ -523,7 +523,7 @@ export const products = [
       },
       {
         q: 'What exit strategies do you accept?',
-        a: 'Refinance into a longer-term facility, sale, or a funded commercial deal. We assess the exit as part of underwriting, and will tell you honestly if a case does not stack up.',
+        a: 'Refinance into a longer term facility, sale, or a funded commercial deal. We assess the exit as part of underwriting, and will tell you honestly if a case does not stack up.',
       },
     ],
   },
@@ -559,7 +559,7 @@ export const products = [
       items: [
         'Light refurbishment: decoration, kitchens, bathrooms — funds up front',
         'Heavy refurbishment: structural works, extensions and conversions',
-        'Ground-up development of small to mid-size schemes',
+        'Ground-up development of small to mid size schemes',
         'Development exit: refinancing a completed scheme into a longer hold',
         'Auction purchases of properties needing work',
       ],
@@ -571,8 +571,8 @@ export const products = [
         'Refurbishment and build costs funded up front, not just the purchase',
         'Staged drawdowns matched to your build programme',
         'Interest can be serviced, retained or rolled into the facility',
-        'Greener-build and energy-efficiency enhancements considered favourably',
-        'Exit to sale, refinance or a longer-term product supported in-house',
+        'Greener-build and energy efficiency enhancements considered favourably',
+        'Exit to sale, refinance or a longer term product supported in house',
       ],
     },
     rates: {
@@ -586,16 +586,16 @@ export const products = [
           ['Development exit', 'from 0.79%', 'up to 70%'],
         ],
       },
-      note: 'Build-cost funding typically up to 100% of identified works on qualifying schemes. Exact pricing reflects scope, location and experience.',
+      note: 'Build cost funding typically up to 100% of identified works on qualifying schemes. Exact pricing reflects scope, location and experience.',
     },
     criteria: {
       heading: 'Key criteria',
       items: [
         'Minimum loan £100,000; maximum £10,000,000',
-        'Terms from 6 to 24 months, longer for development-exit facilities',
+        'Terms from 6 to 24 months, longer for development exit facilities',
         'Light, heavy and ground-up schemes considered',
         'Appraisal and build programme required for larger schemes',
-        'Valuations by full surveyor teams, including in-house where useful',
+        'Valuations by full surveyor teams, including in house where useful',
       ],
     },
     fees: {
@@ -656,7 +656,7 @@ export const products = [
       },
       {
         q: 'Do you fund ground-up development?',
-        a: 'Yes, small to mid-size schemes, with an appraisal of GDV, build programme and a realistic exit. We also provide development-exit finance once a scheme completes.',
+        a: 'Yes, small to mid size schemes, with an appraisal of GDV, build programme and a realistic exit. We also provide development exit finance once a scheme completes.',
       },
     ],
   },
@@ -668,17 +668,17 @@ export const products = [
     band: '£50k–£10m',
     term: 'up to 24 months',
     href: '/products/bridge-to-let/',
-    cardPoints: ['Bridge straight into a longer-term facility', 'One underwriter for the whole journey', 'Refurbishment add-ons'],
+    cardPoints: ['Bridge straight into a longer term facility', 'One underwriter for the whole journey', 'Refurbishment add ons'],
     meta: {
       title: 'Bridge-to-Let & Exit Finance | SME Lending Platform',
       description:
-        'Bridge-to-let and exit finance from 0.64% per month. Purchase now, steady into a longer-term buy-to-let or commercial mortgage with the same team.',
+        'Bridge-to-let and exit finance from 0.64% per month. Purchase now, steady into a longer term buy to let or commercial mortgage with the same team.',
     },
     hero: {
       eyebrow: 'Bridge-to-let & exit finance',
       h1: 'Buy now, exit smoothly — one team for both stages',
-      sub: 'Bridge-to-let combines a short-term bridge with a clear route into a longer-term facility. One underwriter, one set of documents, and refurbishment add-ons when you need them.',
-      note: 'Seamless exit to BTL or commercial · No ERC · Refurb add-ons',
+      sub: 'Bridge-to-let combines a short term bridge with a clear route into a longer term facility. One underwriter, one set of documents, and refurbishment add ons when you need them.',
+      note: 'Seamless exit to BTL or commercial · No ERC · Refurb add ons',
     },
     stats: [
       { value: 'from 0.64%', label: 'per month on the bridge' },
@@ -690,9 +690,9 @@ export const products = [
       eyebrow: 'What it’s for',
       heading: 'When this helps',
       items: [
-        'Purchasing a buy-to-let now and steadying into a longer-term mortgage later',
+        'Purchasing a buy to let now and steadying into a longer term mortgage later',
         'Buying at auction, then letting after light refurbishment',
-        'Buying for a short-term or holiday let now, then refinancing once the rental income is established',
+        'Buying for a short term or holiday let now, then refinancing once the rental income is established',
         'Exiting a development into a hold position on your own terms',
         'Property investors who want certainty across two stages, not two lenders',
       ],
@@ -703,7 +703,7 @@ export const products = [
       items: [
         'Agreed terms for the exit facility from day one, not a hope',
         'Same underwriter across both stages — no re-telling the story',
-        'Refurbishment add-ons funded as part of the facility',
+        'Refurbishment add ons funded as part of the facility',
         'No ERC and no exit fee on the bridge',
         'Interest options that suit landlords, from retained to serviced',
       ],
@@ -715,7 +715,7 @@ export const products = [
         rows: [
           ['Bridge', 'from 0.64% per month', 'up to 12 months'],
           ['Bridge with refurbishment', 'from 0.69% per month', 'up to 18 months'],
-          ['Exit (buy-to-let / commercial)', 'agreed at outset', 'up to 25 years'],
+          ['Exit (buy to let / commercial)', 'agreed at outset', 'up to 25 years'],
         ],
       },
       note: 'Exit terms are indicative at the bridge stage and confirmed against the completed asset and rent roll.',
@@ -744,9 +744,9 @@ export const products = [
       heading: 'The numbers across both stages',
       ledger: [
         { label: 'Bridge', value: '£400,000 at 0.64% per month' },
-        { label: 'Refurb add-on', value: '£60,000 at 0.69% per month' },
+        { label: 'Refurb add on', value: '£60,000 at 0.69% per month' },
         { label: 'Bridge monthly interest', value: '£2,974' },
-        { label: 'Exit', value: '75% LTV long-term buy-to-let, agreed at outset' },
+        { label: 'Exit', value: '75% LTV long term buy to let, agreed at outset' },
         { label: 'Typical scenario', value: '5-month refurb, then let and refine into exit' },
       ],
       note: 'Illustrative example; standard terms vary by case.',
@@ -757,7 +757,7 @@ export const products = [
         {
           n: '1',
           title: 'Agree both stages up front',
-          copy: 'Tell us the purchase, the work and the long-term plan, and we underwrite the exit alongside the bridge.',
+          copy: 'Tell us the purchase, the work and the long term plan, and we underwrite the exit alongside the bridge.',
         },
         {
           n: '2',
@@ -772,7 +772,7 @@ export const products = [
         {
           n: '4',
           title: 'Stay with the same team',
-          copy: 'The same underwriter handles servicing, top-ups and questions in both stages.',
+          copy: 'The same underwriter handles servicing, top ups and questions in both stages.',
         },
       ],
     },
@@ -787,7 +787,7 @@ export const products = [
       },
       {
         q: 'What if my property needs work before it lets?',
-        a: 'Refurbishment add-ons can be funded as part of the facility, with staged drawdowns approved by our surveyors.',
+        a: 'Refurbishment add ons can be funded as part of the facility, with staged drawdowns approved by our surveyors.',
       },
     ],
   },

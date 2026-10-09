@@ -6,28 +6,28 @@ export const guides = [
     read: '12 min read',
     group: 'Bridging',
     intro:
-      'A bridging loan is short-term finance secured against property, taken out to "bridge" a gap — usually until a sale completes, a refinance lands, or a property is finished and let. It is not a mortgage; it is a runway.',
+      'A bridging loan is short term finance secured against property, taken out to "bridge" a gap — usually until a sale completes, a refinance lands, or a property is finished and let. It is not a mortgage; it is a runway.',
     sections: [
       {
         h: 'What bridging is for',
         body: [
-          'Bridging exists where a conventional mortgage cannot move fast enough or flex enough. The most common use cases are chain-break (buying before you sell), auction purchases, capital raising against owned property, and funding refurbishment or development that a bank will not touch until it is finished.',
+          'Bridging exists where a conventional mortgage cannot move fast enough or flex enough. The most common use cases are chain break (buying before you sell), auction purchases, capital raising against owned property, and funding refurbishment or development that a bank will not touch until it is finished.',
           'Terms in the UK run from a few weeks up to 24 months. You pay interest monthly — either serviced out of your own cash flow, retained at drawdown, or rolled into the loan — and the capital is repaid by the exit.',
         ],
-        bullets: ['Chain-break and onward purchase', 'Auction purchases with tight deadlines', 'Capital raising against existing property', 'Refurbishment, development and land', 'Bridge-to-let for investors building a portfolio'],
+        bullets: ['Chain break and onward purchase', 'Auction purchases with tight deadlines', 'Capital raising against existing property', 'Refurbishment, development and land', 'Bridge-to-let for investors building a portfolio'],
       },
       {
         h: 'How bridging is priced',
         body: [
-          'Despite the scary headlines, bridging is priced clearly: a monthly rate (often 0.64%–0.95% a month in 2025) that rises as your loan-to-value climbs, plus an arrangement fee typically around 2%, which is often added to the loan rather than paid upfront.',
-          'The single biggest factor in your rate is the exit strategy. A lender that can see how the loan gets repaid — sale, refinance, inheritance, further draw-down — prices the risk accordingly. The clearer and more documented your exit, the keener the terms.',
+          'Despite the scary headlines, bridging is priced clearly: a monthly rate (often 0.64%–0.95% a month in 2025) that rises as your loan to value climbs, plus an arrangement fee typically around 2%, which is often added to the loan rather than paid upfront.',
+          'The single biggest factor in your rate is the exit strategy. A lender that can see how the loan gets repaid — sale, refinance, inheritance, further draw down — prices the risk accordingly. The clearer and more documented your exit, the keener the terms.',
         ],
         bullets: ['Rates fixed for the whole term', '2% arrangement fee can be added to the loan', 'No ERC and no exit fee on our direct products', 'Interest rebated daily for loans repaid early'],
       },
       {
         h: 'The LTV question',
         body: [
-          'Most bridging lenders lend up to 75% of the property value, with regulated residential bridging typically capped at 70% and first/second-charge structures following their own bands. Lower LTV means lower rate per month, so funding the deal with a little more of your own equity usually pays for itself.',
+          'Most bridging lenders lend up to 75% of the property value, with regulated residential bridging typically capped at 70% and first and second charge structures following their own bands. Lower LTV means lower rate per month, so funding the deal with a little more of your own equity usually pays for itself.',
           'A few lenders — including us — finance refurbishment works on top of the value, which can take the practical combination beyond 90% of the purchase price.',
         ],
       },
@@ -40,15 +40,15 @@ export const guides = [
       },
     ],
     takeaways: [
-      'Bridging is short-term property finance for an exit that is already planned.',
+      'Bridging is short term property finance for an exit that is already planned.',
       'Compare monthly rates AND the arrangement fee — the headline rate is half the story.',
       'A documented exit strategy is worth more to your rate than almost anything else.',
       'Regulated residential bridging is FCA-supervised; commercial bridging is not.',
     ],
     faqs: [
-      { q: 'How fast can a bridge complete?', a: 'For many cases, terms arrive within hours of a credit-backed review and completion can be measured in weeks — some urgent auction cases complete in days. Speed is the point.' },
+      { q: 'How fast can a bridge complete?', a: 'For many cases, terms arrive within hours of a credit approval and completion can be measured in weeks — some urgent auction cases complete in days. Speed is the point.' },
       { q: 'What if my exit changes after drawdown?', a: 'Tell your underwriter early. Because your case is held end to end by one person, adjusting the exit (or extending with agreement) is usually a conversation, not a reapplication.' },
-      { q: 'Do I need to leave an exit fee?', a: 'No. Our direct products carry no exit fee and no early-repayment charge — interest is rebated daily for loans repaid after the third month.' },
+      { q: 'Do I need to leave an exit fee?', a: 'No. Our direct products carry no exit fee and no early repayment charge — interest is rebated daily for loans repaid after the third month.' },
     ],
     related: { label: 'See residential bridging from 0.64% p/m', href: '/products/residential-bridging/' },
   },
@@ -59,19 +59,19 @@ export const guides = [
     read: '10 min read',
     group: 'Bridging',
     intro:
-      'Commercial property finance is wider than a single loan: auction bridging, semi-commercial deals, refurbishment, development and the exit into a longer-term commercial mortgage each behave differently — and each is priced on its own terms.',
+      'Commercial property finance is wider than a single loan: auction bridging, semi commercial deals, refurbishment, development and the exit into a longer term commercial mortgage each behave differently — and each is priced on its own terms.',
     sections: [
       {
         h: 'The commercial deal shapes',
         body: [
           'The structure follows the strategy. A shop with flats above needs different finance to a ground-up development, and a landlord entering a bridging loan to buy at auction needs a third structure again.',
         ],
-        bullets: ['Commercial bridging: secured against commercial or semi-commercial property, up to 75% LTV', 'Development finance: staged drawdowns against build progress, priced on GDV and margin', 'Refurbishment finance: works funded up front, often to 90%+ of purchase price', 'Commercial mortgages: the longer-term exit, typically 25-year terms at per-annum rates'],
+        bullets: ['Commercial bridging: secured against commercial or semi commercial property, up to 75% LTV', 'Development finance: staged drawdowns against build progress, priced on GDV and margin', 'Refurbishment finance: works funded up front, often to 90%+ of purchase price', 'Commercial mortgages: the longer term exit, typically 25-year terms at per annum rates'],
       },
       {
         h: 'How commercial bridging is priced',
         body: [
-          'Commercial bridging rates typically sit above residential — often 0.75%–0.95% a month — because the exit is more judgment-based: letting, fixing and flipping, refinancing into a long-term mortgage. Land sits higher again because its value is harder to verify.',
+          'Commercial bridging rates typically sit above residential — often 0.75%–0.95% a month — because the exit is more judgement based: letting, fixing and flipping, refinancing into a long term mortgage. Land sits higher again because its value is harder to verify.',
           'The discipline is the same as residential: clear exit, sensible LTV, daily interest, fixed for the term.',
         ],
       },
@@ -112,27 +112,27 @@ export const guides = [
       {
         h: 'Up to £25k — the fast money',
         body: [
-          'Small facilities are about speed and cost-of-acquisition. Revenue-based finance and short-term advances in this band are typically decisioned by data — card volume, Open Banking, platform sales — often in minutes, with funds inside 24–48 hours. Expect pricing expressed as a single fixed cost or a factor rate rather than an interest rate.',
+          'Small facilities are about speed and cost of acquisition. Revenue-based finance and short term advances in this band are typically decisioned by data — card volume, Open Banking, platform sales — often in minutes, with funds inside 24–48 hours. Expect pricing expressed as a single fixed cost or a factor rate rather than an interest rate.',
         ],
       },
       {
         h: '£25k–£150k — unsecured term loans',
         body: [
-          'This is the heartland of unsecured business lending. Rates are quoted per 30 days or per month (from around 1.5% per 30 days on strong cases), with terms from 3 to 60 months, soft checks at application, no security, and no early-repayment penalties on straight-answer lenders.',
+          'This is the heartland of unsecured business lending. Rates are quoted per 30 days or per month (from around 1.5% per 30 days on strong cases), with terms from 3 to 60 months, soft checks at application, no security, and no early repayment penalties on straight answer lenders.',
         ],
       },
       {
         h: '£150k–£1m — the product forks',
         body: [
-          'Above £150k the market splits. Asset finance or secured lending appears for equipment-heavy plans, invoice and revenue-based structures suit businesses with predictable sales, and term loans grow to match. Personal guarantees are near-universal; the credit file matters more, and the turnaround lengthens to days rather than hours.',
+          'Above £150k the market splits. Asset finance or secured lending appears for equipment heavy plans, invoice and revenue-based structures suit businesses with predictable sales, and term loans grow to match. Personal guarantees are near universal; the credit file matters more, and the turnaround lengthens to days rather than hours.',
         ],
         bullets: ['£10k–£1m: unsecured business loans, up to 60 months', 'Up to £2m: revenue-based finance against card/sales volume', '£150k+: asset, invoice and secured routes enter the mix'],
       },
     ],
     takeaways: [
-      'Smaller facilities are faster and more data-driven; larger ones are more relationship-based.',
+      'Smaller facilities are faster and more data driven; larger ones are more relationship based.',
       'Quote-on-quote, always check for application fees, exit fees and hidden extras.',
-      'Revenue-based structures repay as a percentage of sales — ideal for seasonal or card-heavy businesses.',
+      'Revenue-based structures repay as a percentage of sales — ideal for seasonal or card heavy businesses.',
     ],
     faqs: [
       { q: 'Is there a minimum turnover?', a: 'Most lenders want £10,000+ in monthly turnover; 12+ months of trading history strengthens the case and the rate.' },
@@ -147,7 +147,7 @@ export const guides = [
     read: '11 min read',
     group: 'Business',
     intro:
-      'Revenue-based finance (also called merchant cash advance or sales-based repayment) is a lump sum repaid as a fixed percentage of your future card or sales volume. You repay when customers pay you — no fixed monthly payment, no fixed end date.',
+      'Revenue-based finance (also called merchant cash advance or sales based repayment) is a lump sum repaid as a fixed percentage of your future card or sales volume. You repay when customers pay you — no fixed monthly payment, no fixed end date.',
     sections: [
       {
         h: 'How repayment actually works',
@@ -160,7 +160,7 @@ export const guides = [
         body: [
           'Businesses with reliable card or digital sales — retail, hospitality, e-commerce, clinics, trade services — where revenue is daily even if profits are lumpy. It suits seasonal trades that cannot stomach a fixed monthly payment in quiet months.',
         ],
-        bullets: ['No fixed monthly payment — repayment flexes with your sales', 'Same-day top-ups available on live facilities', 'Decision on card volume and trading, not just credit score', 'Bad credit alone rarely rules you out'],
+        bullets: ['No fixed monthly payment — repayment flexes with your sales', 'Same day top ups available on live facilities', 'Decision on card volume and trading, not just credit score', 'Bad credit alone rarely rules you out'],
       },
       {
         h: 'How to compare it fairly against a term loan',
@@ -174,7 +174,7 @@ export const guides = [
       'Repayment tracks revenue — slow days cost less, strong days clear debt faster.',
       'The total cost is fixed at day one and never escalates.',
       'Compare total cost and period, never a false APR.',
-      'Top-ups on live facilities make it a rolling source of growth capital, not a one-off loan.',
+      'Top ups on live facilities make it a rolling source of growth capital, not a one off loan.',
     ],
     faqs: [
       { q: 'What if my sales collapse after drawdown?', a: 'Repayment is a percentage of sales, so payments fall with revenue. A minimum floor typically applies — and a good lender talks to you before it ever becomes a problem.' },
@@ -189,7 +189,7 @@ export const guides = [
     read: '8 min read',
     group: 'Business',
     intro:
-      'Lenders fund outcomes, not abstractions. State the purpose and the right product usually picks itself: stock needs flexible sales-linked repayment, equipment wants a term matched to its life, and growth hires call for a conventional loan with a payoff you can plan.',
+      'Lenders fund outcomes, not abstractions. State the purpose and the right product usually picks itself: stock needs flexible sales linked repayment, equipment wants a term matched to its life, and growth hires call for a conventional loan with a payoff you can plan.',
     sections: [
       {
         h: 'Stock and inventory',
@@ -206,7 +206,7 @@ export const guides = [
       {
         h: 'Hiring and marketing',
         body: [
-          'These are growth bets with human-sized payback. A term loan with fixed, affordable payments and no early-repayment charge lets you hire ahead of revenue and pay the loan down fast when the bet pays off.',
+          'These are growth bets with human-sized payback. A term loan with fixed, affordable payments and no early repayment charge lets you hire ahead of revenue and pay the loan down fast when the bet pays off.',
         ],
       },
       {
@@ -217,33 +217,33 @@ export const guides = [
       },
     ],
     takeaways: [
-      'Purpose drives product: sales-linked repayment for stock, term-matched for equipment, fixed payments for growth.',
-      'Check no-early-repayment terms — the ability to prepay figures more than you think.',
+      'Purpose drives product: sales linked repayment for stock, term matched for equipment, fixed payments for growth.',
+      'Check no early repayment terms — the ability to prepay figures more than you think.',
       'A soft eligibility check upfront costs nothing and refines the shortlist fast.',
     ],
     faqs: [
-      { q: 'Can I use revenue-based finance for a one-off purchase?', a: 'Yes — a lump sum is drawn and repaid from future sales. It is best where future revenue is predictable enough to absorb the percentage.' },
+      { q: 'Can I use revenue-based finance for a one off purchase?', a: 'Yes — a lump sum is drawn and repaid from future sales. It is best where future revenue is predictable enough to absorb the percentage.' },
     ],
     related: { label: 'Compare business finance options', href: '/compare/' },
   },
   {
     slug: 'landlord-hub-guide',
     title: 'The landlord hub',
-    teaser: 'Bridge-to-let, refurbishment add-ons and exit planning for landlords building a portfolio.',
+    teaser: 'Bridge-to-let, refurbishment add ons and exit planning for landlords building a portfolio.',
     read: '10 min read',
     group: 'Bridging',
     intro:
       'Property is bought in weeks and refinanced in months. The gap between them is where bridging earns its place — and where landlords who plan the exit win better terms than those who improvise.',
     sections: [
       {
-        h: 'Bridge-to-let: the buy-now, refinance-later lane',
+        h: 'Bridge-to-let: the buy now, refinance later lane',
         body: [
-          'Bridge-to-let is a bridging loan written with a longer-term exit already underwritten — often by the same lender, with one underwriter seeing the whole journey. Buy at auction, refurbish, let, then transfer to a term mortgage without re-selling the case to a stranger.',
+          'Bridge-to-let is a bridging loan written with a longer term exit already underwritten — often by the same lender, with one underwriter seeing the whole journey. Buy at auction, refurbish, let, then transfer to a term mortgage without reselling the case to a stranger.',
         ],
-        bullets: ['Exit facility underwritten from day one', 'Refurbishment add-ons funded up front', 'One underwriter from purchase to completion', 'Avoids the sell-now-or-stall problem of a fixed date'],
+        bullets: ['Exit facility underwritten from day one', 'Refurbishment add ons funded up front', 'One underwriter from purchase to completion', 'Avoids a fixed date forcing you to sell now or stall'],
       },
       {
-        h: 'Refurbishment and value-add',
+        h: 'Refurbishment and value add',
         body: [
           'Many lenders fund the work as well as the purchase — light refurbishment (nights-and-weekends cosmetic work) usually priced like a standard bridge, heavy refurbishment (structural, weeks of trades) a little higher because the schedule matters. Your equity rises as the works finish, which is the point.',
         ],
@@ -258,10 +258,10 @@ export const guides = [
     takeaways: [
       'Buy the fixer, fund the works, exit into the let — one journey, one underwriter.',
       'Refurbishment finance changes the arithmetic: purchase + works can exceed 90% of cost.',
-      'Pre-planned exits get keener rates than improvised ones.',
+      'Preplanned exits get keener rates than improvised ones.',
     ],
     faqs: [
-      { q: 'Do I need to use the same lender for the exit mortgage?', a: 'No, but staying with the same underwriter is usually faster and cheaper — no hand-offs, no re-plumbing, and loyalty fee discounts on many routes.' },
+      { q: 'Do I need to use the same lender for the exit mortgage?', a: 'No, but staying with the same underwriter is usually faster and cheaper — no hand offs, no repeat underwriting, and loyalty fee discounts on many routes.' },
     ],
     related: { label: 'See bridge-to-let & exit finance', href: '/products/bridge-to-let/' },
   },
@@ -283,7 +283,7 @@ export const guides = [
       {
         h: 'Refurbishment that pays for itself',
         body: [
-          'Kitchen replacement, front-of-house refresh, an outdoor space that extends the season — these are spend-to-earn projects. Product fit mirrors property: fund the works, then repay from the lifted takings the works produce.',
+          'Kitchen replacement, front of house refresh, an outdoor space that extends the season — these are spend to earn projects. Product fit mirrors property: fund the works, then repay from the lifted takings the works produce.',
         ],
       },
       {
@@ -299,9 +299,9 @@ export const guides = [
       'Fund refurbishment from the revenue it creates, not the savings it eats.',
     ],
     faqs: [
-      { q: 'How fast can hospitality funding land?', a: 'With statements or Open Banking to hand and a credit-backed review, many cases fund within 24–48 hours.' },
+      { q: 'How fast can hospitality funding land?', a: 'With statements or Open Banking to hand and a credit approval, many cases fund within 24–48 hours.' },
     ],
-    related: { label: 'See revenue-based finance for card-based businesses', href: '/products/revenue-based-finance/' },
+    related: { label: 'See revenue-based finance for card based businesses', href: '/products/revenue-based-finance/' },
   },
   {
     slug: 'industry-finance-ecommerce',
@@ -321,21 +321,21 @@ export const guides = [
       {
         h: 'Underwriting from platform data',
         body: [
-          'Marketplace sales, payment processor volumes and ad-spend efficiency beat a credit file for a young brand. Embedded finance — funding inside your checkout or seller dashboard — is increasingly where the industry lives.',
+          'Marketplace sales, payment processor volumes and ad spend efficiency beat a credit file for a young brand. Embedded finance — funding inside your checkout or seller dashboard — is increasingly where the industry lives.',
         ],
-        bullets: ['Decision on platform/card data, not just credit history', 'Same-day top-ups tied to live volumes', 'Advances sized as a multiple of monthly sales'],
+        bullets: ['Decision on platform/card data, not just credit history', 'Same day top ups tied to live volumes', 'Advances sized as a multiple of monthly sales'],
       },
       {
         h: 'Advertising and product development',
         body: [
-          'Spend on ads and new SKUs is a growth bet with a sales-linked payback. The discipline is the same as hospitality: fund from the revenue the spend creates, and model the quantum on realistic seller data — not the best month you ever had.',
+          'Spend on ads and new SKUs is a growth bet with a sales linked payback. The discipline is the same as hospitality: fund from the revenue the spend creates, and model the quantum on realistic seller data — not the best month you ever had.',
         ],
       },
     ],
     takeaways: [
       'Fund the inventory peak with repayment that flexes with sales.',
       'Platform data underwrites young brands a credit file would block.',
-      'Top-ups on live facilities let growth compound through the year.',
+      'Top ups on live facilities let growth compound through the year.',
     ],
     faqs: [
       { q: 'Is my marketplace account affected by the funding?', a: 'No. Funding is a business facility drawn to your bank account; settlements keep flowing as normal. A percentage of receipts — usually card or platform — services the advance.' },
@@ -349,7 +349,7 @@ export const guides = [
     read: '6 min read',
     group: 'Reference',
     intro:
-      'Lenders hide nothing in the small print — they hide it in the vocabulary. Here is the glossary, translated: the terms that matter, what they actually mean, and where they should make you ask a follow-up question.',
+      'Lenders hide nothing in the small print — they hide it in the vocabulary. Here is the glossary, translated: the terms that matter, what they actually mean, and where they should make you ask a follow up question.',
     sections: [
       {
         h: 'Property finance terms',
@@ -359,7 +359,7 @@ export const guides = [
       {
         h: 'Business finance terms',
         body: ['Business lending speaks its own dialect — the half dozen below carry the real arguments.'],
-        bullets: ['Factor rate — multiplier on the advance (1.25× means £10k repays £12.5k)', 'Fixed cost — the agreed, non-escalating total price of revenue-based finance', 'Open Banking — consented read-only sharing of bank data, in place of statement uploads', 'AIP / DIP — agreement or decision in principle; an early non-binding indication', 'Personal guarantee — the director\'s personal pledge backing the business loan'],
+        bullets: ['Factor rate — multiplier on the advance (1.25× means £10k repays £12.5k)', 'Fixed cost — the agreed, flat total price of revenue-based finance', 'Open Banking — consented read-only sharing of bank data, in place of statement uploads', 'AIP / DIP — agreement or decision in principle; an early informal indication', 'Personal guarantee — the director\'s personal pledge backing the business loan'],
       },
     ],
     takeaways: [
@@ -368,22 +368,22 @@ export const guides = [
       'Regulated and unregulated mean very different protections on property lending.',
     ],
     faqs: [
-      { q: 'Why do lenders avoid APR?', a: 'For short-term business finance, APR is a poor measure — a 12-week advance amortised as an annual rate looks absurd. That is exactly why honest lenders give you the total cost over the realistic period instead.' },
+      { q: 'Why do lenders avoid APR?', a: 'For short term business finance, APR is a poor measure — a 12-week advance amortised as an annual rate looks absurd. That is exactly why honest lenders give you the total cost over the realistic period instead.' },
     ],
     related: { label: 'See our published rates and fees', href: '/rates/' },
   },
 ];
 
 export const glossary = [
-  { term: 'LTV (Loan-to-value)', def: 'The loan amount as a percentage of the property value. Lower LTV typically means a lower rate.' },
+  { term: 'LTV (Loan to value)', def: 'The loan amount as a percentage of the property value. Lower LTV typically means a lower rate.' },
   { term: 'GDV (Gross development value)', def: 'The completed market value of a development, used to size development finance.' },
   { term: 'ERC (Early repayment charge)', def: 'A penalty for repaying a loan early. We do not charge these on our direct products.' },
   { term: 'Factor rate', def: 'A multiplier used on merchant cash advances (e.g., 1.25 times the advance is repaid).' },
   { term: 'Retained interest', def: 'Interest deducted from the loan at drawdown rather than paid monthly.' },
   { term: 'Serviced interest', def: 'Interest paid monthly out of the borrower’s own cash flow.' },
-  { term: 'Exit strategy', def: 'How a bridging loan will be repaid — usually a sale, refinance, inheritance or further draw-down.' },
+  { term: 'Exit strategy', def: 'How a bridging loan will be repaid — usually a sale, refinance, inheritance or further draw down.' },
   { term: 'Dual representation', def: 'In bridging, when one firm acts for both the lender and the borrower under agreed terms.' },
-  { term: 'AIP / DIP', def: 'Agreement (or decision) in principle — an early, non-binding indication that a case qualifies.' },
+  { term: 'AIP / DIP', def: 'Agreement (or decision) in principle — an early, informal indication that a case qualifies.' },
   { term: 'Open Banking', def: 'Secure, read-only sharing of bank data with consent, used instead of uploading statements.' },
 ];
 

@@ -32,12 +32,83 @@ const { compact = false } = Astro.props;
     <div><span>Projected return</span><b style="display:block; font-size:1.3rem;" id="inv-return">—</b></div>
     <div><span>Projected value at maturity</span><b style="display:block; font-size:1.3rem;" id="inv-value">—</b></div>
   </div>
-  <p class="note" style="margin-bottom:0;">Plain-vanilla interest projection only — no compounding, no allowance for fees, defaults or early repayment. Returns are indicative, not guaranteed.</p>
+  <p class="note" style="margin-bottom:0;">Plain vanilla interest projection only — no compounding, no allowance for fees, defaults or early repayment. Returns are indicative, not guaranteed.</p>
 </div>
+
+<style>
+  #invest-calc input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--accent) var(--fill, 50%), var(--border) var(--fill, 50%));
+    outline: none;
+    cursor: pointer;
+  }
+
+  #invest-calc input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--accent-strong);
+    box-shadow: 0 1px 4px rgba(17, 17, 17, 0.25);
+    transition: transform 0.12s ease;
+  }
+
+  #invest-calc input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.12);
+  }
+
+  #invest-calc input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--accent-strong);
+    box-shadow: 0 1px 4px rgba(17, 17, 17, 0.25);
+  }
+
+  #invest-calc input[type="range"]:focus-visible {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 3px;
+  }
+
+  #invest-calc .stat-band b.pop {
+    animation: calcPop 0.3s ease;
+  }
+
+  @keyframes calcPop {
+    0% {
+      transform: scale(0.96);
+      color: var(--accent-strong);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
 
 <script>
   const money = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
   const el = (id) => document.querySelector(`#invest-calc #${id}`);
+
+  function setOut(id, txt) {
+    const node = el(id);
+    node.classList.remove('pop');
+    node.textContent = txt;
+    void node.offsetWidth;
+    node.classList.add('pop');
+  }
+
+  function fillTrack(id) {
+    const input = el(id);
+    if (!input) return;
+    const pct = ((input.value - input.min) / (input.max - input.min)) * 100;
+    input.style.setProperty('--fill', pct + '%');
+  }
 
   function calc() {
     const amount = Number(el('inv-amount').value);
@@ -49,12 +120,17 @@ const { compact = false } = Astro.props;
 
     el('inv-amount-out').textContent = money.format(amount);
     el('inv-term-out').textContent = months + ' months';
-    el('inv-annual').textContent = rate.toFixed(1) + '%';
-    el('inv-return').textContent = money.format(projected);
-    el('inv-value').textContent = money.format(amount + projected);
+    setOut('inv-annual', rate.toFixed(1) + '%');
+    setOut('inv-return', money.format(projected));
+    setOut('inv-value', money.format(amount + projected));
+    fillTrack('inv-amount');
+    fillTrack('inv-term');
   }
 
-  ['inv-amount', 'inv-term', 'inv-type'].forEach((id) => el(id).addEventListener('input', calc));
+  ['inv-amount', 'inv-term', 'inv-type'].forEach((id) => {
+    el(id).addEventListener('input', calc);
+    fillTrack(id);
+  });
 
   calc();
 </script>

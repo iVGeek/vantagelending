@@ -8,7 +8,13 @@
   --accent-soft: #e9fbf2;
   --incorrect: #b3261e;
   --radius: 6px;
-  --shadow: 0 1px 2px rgba(17, 17, 17, 0.06), 0 8px 24px rgba(17, 17, 17, 0.06);
+  --shadow: 0 1px 2px rgba(17, 17, 17, 0.06), 0 8px 24px rgba(17, 17, 17, 0.08);
+  --shadow-lg: 0 2px 4px rgba(17, 17, 17, 0.07), 0 16px 40px rgba(17, 17, 17, 0.1);
+}
+
+::selection {
+  background: var(--accent);
+  color: #07150d;
 }
 
 * {
@@ -32,6 +38,12 @@ a {
   color: inherit;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 img {
   max-width: 100%;
 }
@@ -45,6 +57,13 @@ img {
 
 .hero {
   padding: 4.5rem 0 2.5rem;
+  background: linear-gradient(180deg, #f6fcf9 0%, var(--bg) 100%);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    background: var(--bg);
+  }
 }
 
 .hero h1 {
@@ -110,8 +129,8 @@ img {
 
 .shop:hover {
   border-color: var(--accent);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
 }
 
 .shop .rate {
@@ -162,6 +181,16 @@ img {
   cursor: pointer;
   border: 1px solid transparent;
   font-family: inherit;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
 }
 
 .btn-primary {
@@ -171,6 +200,8 @@ img {
 
 .btn-primary:hover {
   background: var(--accent-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
 .btn-dark {
@@ -180,6 +211,8 @@ img {
 
 .btn-dark:hover {
   background: #000;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
 .btn-ghost {
@@ -190,6 +223,7 @@ img {
 
 .btn-ghost:hover {
   border-color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .stat-band {
@@ -248,6 +282,18 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
+.data tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.data tbody tr:hover {
+  background: var(--accent-soft);
+}
+
+.data tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .tick-list {
   list-style: none;
   padding: 0;
@@ -286,6 +332,12 @@ img {
   padding: 1rem 1.2rem;
   margin-bottom: 0.8rem;
   background: var(--bg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.faq details[open] {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
 }
 
 .faq summary {
@@ -301,15 +353,29 @@ img {
   content: "+";
   font-size: 1.2rem;
   color: var(--accent-strong);
+  transition: transform 0.2s ease;
+  line-height: 1;
 }
 
 .faq details[open] summary::after {
-  content: "−";
+  transform: rotate(45deg);
 }
 
 .faq p {
   color: var(--muted);
   margin: 0.8rem 0 0;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .form-grid {
@@ -407,8 +473,8 @@ img {
 
 .path-card:hover {
   border-color: var(--accent);
-  box-shadow: var(--shadow);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
 }
 
 .path-card b {
@@ -447,8 +513,8 @@ img {
 
 .article-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .article-card .meta-line {
@@ -595,10 +661,16 @@ img {
   content: "+";
   font-size: 1.2rem;
   color: var(--accent-strong);
+  transition: transform 0.2s ease;
+  line-height: 1;
 }
 
 .glossary-list details[open] summary::after {
-  content: "−";
+  transform: rotate(45deg);
+}
+
+.glossary-list details[open] {
+  border-bottom-color: var(--accent);
 }
 
 .glossary-list p {
