@@ -1,17 +1,17 @@
----
+﻿---
 import Base from '../../layouts/Base.astro';
 import { products } from '../../data/products.mjs';
 ---
 
 <Base
   title="Compare Products | SME Lending Platform"
-  description="Compare all six funding products side by side — rates, ranges, fees and exit behaviour in one table."
+  description="Compare all six funding products side by side â€” rates, ranges, fees and exit behaviour in one table."
 >
   <section class="hero" style="padding-bottom:1rem;">
     <div class="container">
-      <span class="eyebrow">Borrow · Compare</span>
+      <span class="eyebrow">Borrow Â· Compare</span>
       <h1>All the products, side by side</h1>
-      <p class="sub">Headline rate, range, term and the fees that actually bite — before a phone call, not after one.</p>
+      <p class="sub">Headline rate, range, term and the fees that actually bite â€” before a phone call, not after one.</p>
     </div>
   </section>
 
@@ -34,14 +34,14 @@ import { products } from '../../data/products.mjs';
               <td><b>{p.name}</b><div style="color:var(--muted); font-size:.88rem;">{p.category}</div></td>
               <td>{p.hook}</td>
               <td style="white-space:nowrap;">{p.band}</td>
-              <td style="white-space:nowrap;">{p.term}</td>
-              <td style="max-width:220px; font-size:.9rem;">{p.fees.items.slice(0, 2).join(' · ')}</td>
-              <td><a href={p.href} style="color:var(--accent-strong); font-weight:700; white-space:nowrap;">Details →</a></td>
+              <td style='max-width:220px; font-size:.9rem;'>{p.fees.items.slice(0, 2).join(' · ')}</td>
+              <td style="max-width:220px; font-size:.9rem;">{p.fees.items.slice(0, 2).join(' Â· ')}</td>
+              <td><a href={p.href} style="color:var(--accent-strong); font-weight:700; white-space:nowrap;">Details â†’</a></td>
             </tr>
           ))}
         </tbody>
       </table>
-      <p class="note" style="margin-top:1rem;">Indicative 2025–26 pricing shown for comparison — placeholder market ranges, not committed quotes. Exact terms are confirmed in writing only after credit approval.</p>
+      <p class="note" style="margin-top:1rem;">Indicative 2025â€“26 pricing shown for comparison â€” placeholder market ranges, not committed quotes. Exact terms are confirmed in writing only after credit approval.</p>
     </div>
   </section>
 
@@ -51,7 +51,7 @@ import { products } from '../../data/products.mjs';
         <div class="card">
           <span class="eyebrow">Not sure which fits?</span>
           <h3 style="margin:.5rem 0;">Start with the problem</h3>
-          <p style="color:var(--muted); margin-bottom:1.2rem;">Buying before you sell? That’s bridging. Smoothing cash flow? That’s business finance. The learn section explains the difference in plain English.</p>
+          <p style="color:var(--muted); margin-bottom:1.2rem;">Buying before you sell? Thatâ€™s bridging. Smoothing cash flow? Thatâ€™s business finance. The learn section explains the difference in plain English.</p>
           <a class="btn btn-ghost" href="/learn/">Read the guides</a>
         </div>
         <div class="card">
