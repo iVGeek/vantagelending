@@ -37,7 +37,9 @@ import { site } from '../data/site.mjs';
         <summary>Learn</summary>
         <div class="drop-links">
           <a href="/learn/">All guides</a>
-          <a href="/learn/glossary/">Glossary</a>
+          <a href="/library/">Library</a>
+          <a href="/glossary/">Glossary</a>
+          <a href="/learn/glossary/">Learn glossary</a>
         </div>
       </details>
       <a href="/about/">About</a>
@@ -48,7 +50,7 @@ import { site } from '../data/site.mjs';
       <a class="btn btn-primary" href="/apply/">Apply</a>
     </div>
     <details class="mobile">
-      <summary aria-label="Menu">☰</summary>
+      <summary aria-label="Menu">?</summary>
       <div class="mobile-links">
         <b>Borrow</b>
         <a href="/products/">All products</a>
@@ -68,7 +70,9 @@ import { site } from '../data/site.mjs';
         <a href="/invest/register/">Register interest</a>
         <b>Learn</b>
         <a href="/learn/">All guides</a>
-        <a href="/learn/glossary/">Glossary</a>
+        <a href="/library/">Library</a>
+        <a href="/glossary/">Glossary</a>
+        <a href="/learn/glossary/">Learn glossary</a>
         <b>Company</b>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
@@ -79,164 +83,24 @@ import { site } from '../data/site.mjs';
 </header>
 
 <style>
-  .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .topbar-in {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    height: 64px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.05rem;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-  }
-
-  .brand-mark {
-    background: var(--ink);
-    color: var(--accent);
-    border-radius: 4px;
-    padding: 0.15rem 0.35rem;
-    font-size: 0.8rem;
-    letter-spacing: 0;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    margin-left: auto;
-  }
-
-  .nav > a,
-  .drop > summary {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--ink);
-    padding: 0.45rem 0.7rem;
-    border-radius: var(--radius);
-    cursor: pointer;
-    list-style: none;
-  }
-
-  .nav > a:hover,
-  .drop > summary:hover {
-    color: var(--accent-strong);
-    background: var(--accent-soft);
-  }
-
-  .drop {
-    position: relative;
-  }
-
-  .drop-links {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 6px);
-    min-width: 230px;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 0.5rem;
-    display: none;
-    flex-direction: column;
-  }
-
-  .drop[open] .drop-links {
-    display: flex;
-  }
-
-  .drop-links a {
-    padding: 0.45rem 0.7rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.93rem;
-    color: var(--ink);
-  }
-
-  .drop-links a:hover {
-    background: var(--accent-soft);
-    color: var(--accent-strong);
-  }
-
-  .actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .phone {
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .mobile {
-    display: none;
-    margin-left: auto;
-  }
-
-  .mobile summary {
-    list-style: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-    padding: 0.2rem 0.4rem;
-  }
-
-  .mobile-links {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 64px;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    max-height: calc(100vh - 64px);
-    overflow-y: auto;
-  }
-
-  .mobile-links b {
-    margin-top: 0.6rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-  }
-
-  .mobile-links a {
-    text-decoration: none;
-    font-weight: 600;
-    text-align: left;
-  }
-
-  @media (max-width: 960px) {
-    .nav,
-    .actions .phone {
-      display: none;
-    }
-
-    .mobile {
-      display: block;
-    }
-  }
+  .topbar { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--border); }
+  .topbar-in { display: flex; align-items: center; gap: 1.5rem; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.02em; white-space: nowrap; }
+  .brand-mark { background: var(--ink); color: var(--accent); border-radius: 4px; padding: 0.15rem 0.35rem; font-size: 0.8rem; letter-spacing: 0; }
+  .nav { display: flex; align-items: center; gap: 0.2rem; margin-left: auto; }
+  .nav > a, .drop > summary { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--ink); padding: 0.45rem 0.7rem; border-radius: var(--radius); cursor: pointer; list-style: none; }
+  .nav > a:hover, .drop > summary:hover { color: var(--accent-strong); background: var(--accent-soft); }
+  .drop { position: relative; }
+  .drop-links { position: absolute; left: 0; top: calc(100% + 6px); min-width: 230px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 0.5rem; display: none; flex-direction: column; }
+  .drop[open] .drop-links { display: flex; }
+  .drop-links a { padding: 0.45rem 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.93rem; color: var(--ink); }
+  .drop-links a:hover { background: var(--accent-soft); color: var(--accent-strong); }
+  .actions { display: flex; align-items: center; gap: 1rem; }
+  .phone { font-weight: 700; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
+  .mobile { display: none; margin-left: auto; }
+  .mobile summary { list-style: none; cursor: pointer; font-size: 1.4rem; padding: 0.2rem 0.4rem; }
+  .mobile-links { position: absolute; left: 0; right: 0; top: 64px; background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; max-height: calc(100vh - 64px); overflow-y: auto; }
+  .mobile-links b { margin-top: 0.6rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .mobile-links a { text-decoration: none; font-weight: 600; text-align: left; }
+  @media (max-width: 960px) { .nav, .actions .phone { display: none; } .mobile { display: block; } }
 </style>
