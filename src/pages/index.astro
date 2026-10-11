@@ -11,16 +11,16 @@ import { site } from '../data/site.mjs';
 ---
 
 <Base
-  title="SME Lending Platform | Borrow and invest in SME finance"
-  description="Direct SME lending, business bridging and a place to invest. Six products on a published price list, tools that price deals live, and a restricted invest side."
+  title="SME Lending Platform | Borrow the money and invest in the loans behind it"
+  description="Direct SME lending, business bridging and a place to invest. Published pricing, tools that price deals live, and a restricted invest side."
 >
   <section class="hero">
     <div class="container">
       <span class="eyebrow">Borrow or invest · {site.tagline}</span>
-      <h1>One platform, two sides of the same table.</h1>
+      <h1>One platform. Both sides of the table.</h1>
       <p class="sub">
-        SMEs and property investors borrow on a published price list with live pricing tools. Investors deploy into
-        the same deals — behind an eligibility gate, with returns that are indicative, never promised.
+        Businesses and property investors borrow on a published price list with live pricing tools. Investors choose
+        the same loans directly — behind an eligibility gate, with returns that are indicative, never promised.
       </p>
       <div class="hero-dual">
         <a class="path-card" href="/products/">
@@ -42,7 +42,7 @@ import { site } from '../data/site.mjs';
       <div class="section-head">
         <span class="eyebrow">Borrow</span>
         <h2>Six products, priced like a shop</h2>
-        <p>Every product shows its rate, range and term up front — because the price list shouldn’t be behind a phone call.</p>
+        <p>Every product shows its rate, range and term up front — the price list isn’t behind a phone call.</p>
       </div>
       <div class="grid-products">
         {products.map((p) => <ProductShop product={p} />)}

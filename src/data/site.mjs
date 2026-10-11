@@ -3,7 +3,8 @@ const SITE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://vantage-lending.onr
 export const site = {
   name: 'SME Lending Platform',
   shortName: 'SLP',
-  tagline: 'Direct SME lending and property bridging — with an invest side of the table.',
+  mark: 'S',
+  tagline: 'Direct business lending and property finance — with an invest side of the table.',
   url: SITE_URL,
   formEndpoint: '',
   phone: '020 7000 0000',

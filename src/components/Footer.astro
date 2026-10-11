@@ -5,11 +5,18 @@ import { site } from '../data/site.mjs';
 <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
-      <div>
+      <div class="footer-about">
         <div class="brand">
-          <span class="brand-mark">{site.shortName}</span>
-          <span class="brand-name">SME Lending Platform</span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="30" height="30" role="img">
+              <rect x="1" y="1" width="30" height="30" rx="8" fill="var(--ink)" />
+              <text x="16" y="21" text-anchor="middle" font-size="15" font-weight="800" fill="var(--accent)" font-family="inherit">S</text>
+              <rect x="9" y="25" width="14" height="3" rx="1.5" fill="var(--accent)" />
+            </svg>
+          </span>
+          <span class="brand-name">SME Lending <em>Platform</em></span>
         </div>
+        <p class="brand-tag">{site.tagline}</p>
         <p class="disclosure" style="max-width:46ch;">{site.footerNote}</p>
       </div>
       <div class="footer-cols">
@@ -41,7 +48,7 @@ import { site } from '../data/site.mjs';
           <h4>Learn</h4>
           <ul>
             <li><a href="/learn/">All guides</a></li>
-            <li><a href="/glossary/">Glossary</a><a href="/library/">Library</a><a href="/learn/glossary/">Learn glossary</a></li>
+            <li><a href="/learn/glossary/">Glossary</a></li>
             <li><a href="/case-studies/">Case studies</a></li>
             <li><a href="/eligibility/">Eligibility &amp; exclusions</a></li>
             <li><a href="/documents/">Document checklist</a></li>
@@ -59,7 +66,11 @@ import { site } from '../data/site.mjs';
       </div>
     </div>
     <div class="footer-bottom">
-      {site.phone} · {site.email} · {site.address} · {site.companyNo} · {site.ico}
+      <span>{site.phone}</span>
+      <span>{site.email}</span>
+      <span>{site.address}</span>
+      <span>{site.companyNo}</span>
+      <span>{site.ico}</span>
     </div>
   </div>
 </footer>
@@ -67,30 +78,50 @@ import { site } from '../data/site.mjs';
 <style>
   .site-footer {
     border-top: 1px solid var(--border);
-    background: #fafafa;
+    background: var(--navy);
+    color: #dfe8ef;
     margin-top: 4rem;
   }
 
   .footer-top {
     display: grid;
-    grid-template-columns: 1.3fr 2fr;
-    gap: 2rem;
-    padding: 2.5rem 0 1.5rem;
+    grid-template-columns: 1.35fr 2fr;
+    gap: 2.5rem;
+    padding: 3rem 0 1.5rem;
   }
 
   .brand {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.65rem;
     font-weight: 800;
+    font-size: 1.06rem;
+    color: #fff;
+  }
+
+  .brand-name em {
+    font-style: normal;
+    color: var(--accent);
   }
 
   .brand-mark {
-    background: var(--ink);
-    color: var(--accent);
-    border-radius: 4px;
-    padding: 0.15rem 0.35rem;
-    font-size: 0.8rem;
+    display: inline-flex;
+    line-height: 0;
+  }
+
+  .brand-mark svg {
+    display: block;
+  }
+
+  .brand-tag {
+    color: #9fb3c2;
+    font-size: 0.98rem;
+    margin: 1rem 0 0.4rem;
+    max-width: 34ch;
+  }
+
+  .site-footer .disclosure {
+    color: #8fa3b4;
   }
 
   .footer-cols {
@@ -100,11 +131,11 @@ import { site } from '../data/site.mjs';
   }
 
   .footer-cols h4 {
-    margin: 0 0 0.6rem;
-    font-size: 0.8rem;
+    margin: 0 0 0.7rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
+    letter-spacing: 0.1em;
+    color: var(--accent);
   }
 
   .footer-cols ul {
@@ -114,22 +145,27 @@ import { site } from '../data/site.mjs';
   }
 
   .footer-cols a {
-    display: block;
-    padding: 0.22rem 0;
+    display: inline-block;
+    padding: 0.24rem 0;
     text-decoration: none;
-    color: var(--ink);
+    color: #cfdbe5;
     font-size: 0.92rem;
+    transition: color 0.15s ease, transform 0.15s ease;
   }
 
   .footer-cols a:hover {
-    color: var(--accent-strong);
+    color: #fff;
+    transform: translateX(2px);
   }
 
   .footer-bottom {
-    border-top: 1px solid var(--border);
-    padding: 1.1rem 0;
-    color: var(--muted);
-    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.2rem 0;
+    color: #8fa3b4;
+    font-size: 0.82rem;
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 900px) {
