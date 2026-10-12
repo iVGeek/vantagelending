@@ -4,4 +4,5 @@ dist
 .dev.*.log
 .dev*.log
 .dev*.err.log
+.preview*.log
 /npm start/

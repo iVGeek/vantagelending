@@ -13,10 +13,10 @@ import { site } from '../../../data/site.mjs';
   <section class="hero" style="padding-bottom:1rem;">
     <div class="container">
       <span class="eyebrow">Invest · Calculator</span>
-      <h1>Slide the amount, watch the return</h1>
+      <h1>Investor return calculator</h1>
       <p class="sub">
-        The investor’s mirror of the borrower calculator on the Rates page. Indicative projected returns by deal type —
-        shown only to eligible investors, and still not guarantees.
+        The investor equivalent of the borrower calculator on the Rates page. It shows indicative projected returns by deal
+        type to eligible investors; returns are illustrative, not guaranteed.
       </p>
     </div>
   </section>
@@ -29,8 +29,8 @@ import { site } from '../../../data/site.mjs';
         <div hidden>
           <InvestCalculator />
           <div class="card" style="margin-top:1.4rem;">
-            <span class="eyebrow">Indicative targets by paper</span>
-            <h3 style="margin:.4rem 0;">What the industry looks like</h3>
+            <span class="eyebrow">Indicative targets by instrument</span>
+            <h3 style="margin:.4rem 0;">Illustrative figures by instrument</h3>
             <table class="data" style="margin-top:.6rem;">
               <thead>
                 <tr>{invest.returns.rows[0].map((_, i) => <th>{['Instrument', 'Target return', 'Profile'][i]}</th>)}</tr>

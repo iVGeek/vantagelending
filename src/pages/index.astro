@@ -17,10 +17,10 @@ import { site } from '../data/site.mjs';
   <section class="hero">
     <div class="container">
       <span class="eyebrow">Borrow or invest · {site.tagline}</span>
-      <h1>One platform. Both sides of the table.</h1>
+      <h1>Direct lending for UK businesses and property investors</h1>
       <p class="sub">
-        Businesses and property investors borrow on a published price list with live pricing tools. Investors choose
-        the same loans directly — behind an eligibility gate, with returns that are indicative, never promised.
+        Borrowing on published rates with live pricing tools and a soft check at application. Investment in the same
+        lending is open to eligible investors, with returns shown as illustrative only.
       </p>
       <div class="hero-dual">
         <a class="path-card" href="/products/">
@@ -41,8 +41,8 @@ import { site } from '../data/site.mjs';
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Borrow</span>
-        <h2>Six products, priced like a shop</h2>
-        <p>Every product shows its rate, range and term up front — the price list isn’t behind a phone call.</p>
+        <h2>Six funding products, with published pricing</h2>
+        <p>Every product shows its rate, range and term up front, so facilities can be compared before you apply.</p>
       </div>
       <div class="grid-products">
         {products.map((p) => <ProductShop product={p} />)}
@@ -59,8 +59,8 @@ import { site } from '../data/site.mjs';
     <div class="container" style="max-width:820px;">
       <div class="section-head" style="text-align:center;">
         <span class="eyebrow">Live pricing</span>
-        <h2>Move the sliders. Watch the numbers move.</h2>
-        <p>The same calculator core runs across rates, products and the invest side.</p>
+        <h2>Live pricing calculators</h2>
+        <p>The same calculator is used across rates, product pages and the invest side.</p>
       </div>
       <Calculator />
     </div>
@@ -70,10 +70,10 @@ import { site } from '../data/site.mjs';
     <div class="container">
       <div class="invest-band">
         <span class="eyebrow">Invest</span>
-        <h2 style="margin:.3rem 0 .5rem;">The other side of the table</h2>
+        <h2 style="margin:.3rem 0 .5rem;">Investments in the lending book</h2>
         <p style="color:var(--muted); margin:0; max-width:62ch;">
-          Retail-size and institutional capital funding the lending book you just browsed. Self certify as high net worth,
-          sophisticated or institutional to see live deal terms and a mirrored return calculator.
+          Capital from eligible investors funds the facilities on this platform. Access to deal terms and return
+          illustrations is restricted to high net worth, sophisticated or institutional investors.
         </p>
         <a class="btn btn-dark" href="/invest/">How investing works</a>{' '}
         <a class="btn btn-ghost" href="/invest/deals/">See the live deals</a>
@@ -86,8 +86,8 @@ import { site } from '../data/site.mjs';
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Learn</span>
-        <h2>Finance, translated</h2>
-        <p>Plain English guides that decode the rates, the fees and the questions lenders actually work through.</p>
+        <h2>Guides to business and property finance</h2>
+        <p>Practical guides to the rates, fees and underwriting criteria behind our lending products.</p>
       </div>
       <div class="grid-articles">
         {guides.slice(0, 3).map((g) => (
@@ -102,14 +102,14 @@ import { site } from '../data/site.mjs';
       <div class="grid-articles" style="grid-template-columns:1fr 1fr; margin-top:1.2rem;">
         <div class="card">
           <span class="eyebrow">Compare</span>
-          <h3 style="margin:.5rem 0;">All products, side by side</h3>
-          <p style="color:var(--muted); margin-bottom:1.2rem;">Rates, ranges, fees and exit behaviour in one table — no phone call required.</p>
-          <a class="btn btn-ghost" href="/compare/">Open the table</a>
+          <h3 style="margin:.5rem 0;">Compare all six products</h3>
+          <p style="color:var(--muted); margin-bottom:1.2rem;">Rates, ranges, fees and exit behaviour, compared in one table.</p>
+          <a class="btn btn-ghost" href="/compare/">Open the comparison</a>
         </div>
         <div class="card">
           <span class="eyebrow">Glossary</span>
-          <h3 style="margin:.5rem 0;">Decode the acronyms</h3>
-          <p style="color:var(--muted); margin-bottom:1.2rem;">LTV, GDV, ERC, AIP… translated into plain English.</p>
+          <h3 style="margin:.5rem 0;">Lending terms, explained</h3>
+          <p style="color:var(--muted); margin-bottom:1.2rem;">LTV, GDV, ERC, AIP and other terms, defined in plain English.</p>
           <a class="btn btn-ghost" href="/learn/glossary/">Open the glossary</a>
         </div>
       </div>
@@ -120,8 +120,8 @@ import { site } from '../data/site.mjs';
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Proof</span>
-        <h2>Cases where the patient answer won</h2>
-        <p>Many of these deals were “no” elsewhere first — the reason why is part of the story.</p>
+        <h2>Case studies</h2>
+        <p>Anonymised examples of how we structure and complete transactions.</p>
       </div>
       <div class="grid-cases">
         {homeCaseStudies.map((c) => (
@@ -143,7 +143,7 @@ import { site } from '../data/site.mjs';
     <div class="container" style="max-width:820px;">
       <div class="section-head">
         <span class="eyebrow">FAQs</span>
-        <h2>Straight answers first</h2>
+        <h2>Questions we are asked most often</h2>
       </div>
       <Faq items={homeFaqs.slice(0, 5)} />
       <div style="margin-top:1.4rem;">

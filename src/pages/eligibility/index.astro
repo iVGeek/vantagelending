@@ -10,8 +10,8 @@ import { eligibility } from '../../data/eligibility.mjs';
   <section class="hero" style="padding-bottom:1rem;">
     <div class="container">
       <span class="eyebrow">Borrow · Eligibility</span>
-      <h1>Who we lend to — and what we don’t</h1>
-      <p class="sub">A soft first check, and honest exclusions. Better to know on page one than after six weeks of chasing.</p>
+      <h1>Eligibility criteria and exclusions</h1>
+      <p class="sub">A soft initial check at application and clear exclusions, so you know early whether a facility is likely to fit.</p>
     </div>
   </section>
 
@@ -40,7 +40,7 @@ import { eligibility } from '../../data/eligibility.mjs';
     <div class="container" style="max-width:820px;">
       <div class="card" style="border-left:4px solid var(--incorrect);">
         <span class="eyebrow">{eligibility.excluded.heading}</span>
-        <h2 style="margin:.4rem 0 .6rem;">Straight exclusions</h2>
+        <h2 style="margin:.4rem 0 .6rem;">Exclusions</h2>
         <p style="color:var(--muted);">{eligibility.excluded.intro}</p>
         <ul class="tick-list" style="margin:0.6rem 0 0;">
           {eligibility.excluded.items.map((i) => <li style="padding-left:0; margin-bottom:.5rem;">✕&nbsp;&nbsp;{i}</li>)}

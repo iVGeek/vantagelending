@@ -349,7 +349,7 @@ export const guides = [
     read: '6 min read',
     group: 'Reference',
     intro:
-      'Lenders hide nothing in the small print — they hide it in the vocabulary. Here is the glossary, translated: the terms that matter, what they actually mean, and where they should make you ask a follow up question.',
+      'The terms lenders use can sound like a separate language. This glossary explains them in plain English: what each term means, and when it should prompt a follow-up question.',
     sections: [
       {
         h: 'Property finance terms',
