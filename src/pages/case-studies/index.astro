@@ -1,46 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { caseStudies } from '../../data/caseStudies.mjs';
+import ClientPage from '../../components/ClientPage.astro';
 ---
 
-<Base
-  title="Case Studies | SME Lending Platform"
-  description="Real shaped deals across bridging, refurbishment and business finance — including the ones other lenders said no to first."
->
-  <section class="hero" style="padding-bottom:1rem;">
-    <div class="container">
-      <span class="eyebrow">Borrow · Case studies</span>
-      <h1>Case studies</h1>
-      <p class="sub">
-        Anonymised and illustrative profiles of how we structure and complete cases, including some that were declined
-        elsewhere first.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0.5rem;">
-    <div class="container">
-      <div class="grid-cases">
-        {caseStudies.map((c) => (
-          <article class="case-card">
-            <div class="case-stat">{c.type} · {c.stat}</div>
-            <h3>{c.title}</h3>
-            {c.refused && <p class="refused">{c.refused}</p>}
-            <p style="color:var(--muted); font-size:.95rem;"><b>Situation.</b> {c.situation}</p>
-            <p style="color:var(--muted); font-size:.95rem;"><b>Solution.</b> {c.solution}</p>
-            <p style="color:var(--muted); font-size:.95rem;"><b>Result.</b> {c.result}</p>
-            <blockquote>
-              “{c.quote}”
-              <footer>— {c.author}</footer>
-            </blockquote>
-          </article>
-        ))}
-      </div>
-      <p class="note" style="margin-top:1.6rem;">Anonymised and illustrative profile case shapes, for demonstration — not a specific real borrower. Figures are placeholders pending real underwriting cases.</p>
-      <div style="margin-top:1.4rem;">
-        <a class="btn btn-primary" href="/apply/">Discuss your case</a>{' '}
-        <a class="btn btn-ghost" href="/faqs/">Read the FAQs</a>
-      </div>
-    </div>
-  </section>
+<Base title="Case studies | SME Lending Platform" description="Illustrative case studies showing how we structure and complete lending facilities.">
+  <ClientPage page="case-studies" />
 </Base>

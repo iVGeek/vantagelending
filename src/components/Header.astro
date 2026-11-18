@@ -1,269 +1,34 @@
 ---
-import { site } from '../data/site.mjs';
+import { BRAND } from '../data/client-site.mjs';
+
+const path = Astro.url.pathname;
+const active = (href) =>
+  path === href || (href !== '/' && path.startsWith(href)) ? { 'aria-current': 'page' } : {};
 ---
 
-<header class="topbar">
-  <div class="container topbar-in">
-    <a class="brand" href="/" aria-label={`${site.name} — home`}>
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="32" height="32" role="img">
-          <rect x="1" y="1" width="30" height="30" rx="8" fill="var(--ink)" />
-          <text x="16" y="21" text-anchor="middle" font-size="15" font-weight="800" fill="var(--accent)" font-family="inherit">S</text>
-          <rect x="9" y="25" width="14" height="3" rx="1.5" fill="var(--accent)" />
-        </svg>
-      </span>
-      <span class="brand-name">SME Lending <em>Platform</em></span>
+<div class="strip">
+  Business lending carries risk. Investments can lose value and are not protected by the FSCS.
+  <a href="/legal/">Risk summary</a>
+</div>
+
+<header class="top band">
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="Home">
+      <svg width="46" height="38" viewBox="0 0 46 40" aria-hidden="true">
+        <circle cx="9" cy="29" r="7.5" fill="var(--lemon)" stroke="currentColor" stroke-width="3" />
+        <circle cx="23" cy="20" r="9" fill="var(--coral)" stroke="currentColor" stroke-width="3" />
+        <circle cx="37" cy="10" r="7.5" fill="var(--blue)" stroke="currentColor" stroke-width="3" />
+      </svg>
+      <span>{BRAND}</span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <details class="drop">
-        <summary>Borrow</summary>
-        <div class="drop-links">
-          <a href="/products/">All products</a>
-          <a href="/rates/">Rates</a>
-          <a href="/compare/">Compare</a>
-          <a href="/eligibility/">Eligibility &amp; exclusions</a>
-          <a href="/documents/">Document checklist</a>
-          <a href="/faqs/">FAQs</a>
-          <a href="/apply/">Apply</a>
-        </div>
-      </details>
-      <details class="drop">
-        <summary>Invest</summary>
-        <div class="drop-links">
-          <a href="/invest/">Invest overview</a>
-          <a href="/invest/how-it-works/">How it works</a>
-          <a href="/invest/deals/">Live deals</a>
-          <a href="/invest/calculator/">Return calculator</a>
-          <a href="/invest/eligibility/">Eligibility</a>
-          <a href="/invest/institutional/">Institutional &amp; family office</a>
-          <a href="/invest/register/">Register interest</a>
-        </div>
-      </details>
-      <details class="drop">
-        <summary>Learn</summary>
-        <div class="drop-links">
-          <a href="/learn/">Plain-English guides</a>
-          <a href="/learn/glossary/">Glossary</a>
-        </div>
-      </details>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/products/" {...active('/products/')}>Borrow</a>
+      <a href="/rates/" {...active('/rates/')}>Rates</a>
+      <a href="/invest/" {...active('/invest/')}>Invest</a>
+      <a href="/learn/" {...active('/learn/')}>Learn</a>
+      <a href="/about/" {...active('/about/')}>Company</a>
+      <a class="btn" href="/apply/">Apply</a>
     </nav>
-    <div class="actions">
-      <a class="phone" href={`tel:${site.phone.replace(/ /g, '')}`}>{site.phone}</a>
-      <a class="btn btn-primary" href="/apply/">Apply</a>
-    </div>
-    <details class="mobile">
-      <summary aria-label="Menu">☰</summary>
-      <div class="mobile-links">
-        <b>Borrow</b>
-        <a href="/products/">All products</a>
-        <a href="/rates/">Rates</a>
-        <a href="/compare/">Compare</a>
-        <a href="/eligibility/">Eligibility &amp; exclusions</a>
-        <a href="/documents/">Document checklist</a>
-        <a href="/faqs/">FAQs</a>
-        <a href="/apply/">Apply</a>
-        <b>Invest</b>
-        <a href="/invest/">Invest overview</a>
-        <a href="/invest/how-it-works/">How it works</a>
-        <a href="/invest/deals/">Live deals</a>
-        <a href="/invest/calculator/">Return calculator</a>
-        <a href="/invest/eligibility/">Eligibility</a>
-        <a href="/invest/institutional/">Institutional &amp; family office</a>
-        <a href="/invest/register/">Register interest</a>
-        <b>Learn</b>
-        <a href="/learn/">Plain-English guides</a>
-        <a href="/learn/glossary/">Glossary</a>
-        <b>Company</b>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a class="btn btn-primary" href="/apply/">Apply</a>
-      </div>
-    </details>
   </div>
 </header>
-
-<style>
-  .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: saturate(1.4) blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .topbar-in {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    height: 68px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.08rem;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-  }
-
-  .brand-name em {
-    font-style: normal;
-    color: var(--accent-strong);
-  }
-
-  .brand-mark {
-    display: inline-flex;
-    line-height: 0;
-  }
-
-  .brand-mark svg {
-    display: block;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    margin-left: auto;
-  }
-
-  .nav > a,
-  .drop > summary {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--ink);
-    padding: 0.5rem 0.75rem;
-    border-radius: 999px;
-    cursor: pointer;
-    list-style: none;
-    transition: color 0.15s ease, background-color 0.15s ease;
-  }
-
-  .nav > a:hover,
-  .drop > summary:hover {
-    color: var(--accent-strong);
-    background: var(--accent-soft);
-  }
-
-  .drop {
-    position: relative;
-  }
-
-  .drop-links {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 8px);
-    min-width: 240px;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow);
-    padding: 0.5rem;
-    display: none;
-    flex-direction: column;
-  }
-
-  .drop[open] .drop-links {
-    display: flex;
-    animation: fadeIn 0.12s ease;
-  }
-
-  .drop-links a {
-    padding: 0.5rem 0.75rem;
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.93rem;
-    color: var(--ink);
-  }
-
-  .drop-links a:hover {
-    background: var(--accent-soft);
-    color: var(--accent-strong);
-  }
-
-  .actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .phone {
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    white-space: nowrap;
-    color: var(--muted);
-    transition: color 0.15s ease;
-  }
-
-  .phone:hover {
-    color: var(--accent-strong);
-  }
-
-  .mobile {
-    display: none;
-    margin-left: auto;
-  }
-
-  .mobile summary {
-    list-style: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-    padding: 0.2rem 0.4rem;
-    color: var(--ink);
-  }
-
-  .mobile-links {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 68px;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-    max-height: calc(100vh - 68px);
-    overflow-y: auto;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .mobile-links b {
-    margin-top: 0.7rem;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent-strong);
-  }
-
-  .mobile-links a {
-    text-decoration: none;
-    font-weight: 600;
-    text-align: left;
-    padding: 0.15rem 0;
-  }
-
-  .mobile-links .btn {
-    margin-top: 0.8rem;
-    text-align: center;
-  }
-
-  @media (max-width: 960px) {
-    .nav,
-    .actions .phone {
-      display: none;
-    }
-    .mobile {
-      display: block;
-    }
-  }
-</style>

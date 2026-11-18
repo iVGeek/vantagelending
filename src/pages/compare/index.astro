@@ -1,66 +1,8 @@
-﻿---
+---
 import Base from '../../layouts/Base.astro';
-import { products } from '../../data/products.mjs';
+import ClientPage from '../../components/ClientPage.astro';
 ---
 
-<Base
-  title="Compare Products | SME Lending Platform"
-  description="Compare all six funding products side by side — rates, ranges, fees and exit behaviour in one table."
->
-  <section class="hero" style="padding-bottom:1rem;">
-    <div class="container">
-      <span class="eyebrow">Borrow · Compare</span>
-      <h1>Compare our funding products</h1>
-      <p class="sub">Headline rate, range, term and fees for each product, compared in one table.</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0.5rem;">
-    <div class="container" style="overflow-x:auto;">
-      <table class="data" style="min-width:760px;">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Rates</th>
-            <th>Size</th>
-            <th>Term</th>
-            <th>Fees &amp; exit</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((p) => (
-            <tr>
-              <td><b>{p.name}</b><div style="color:var(--muted); font-size:.88rem;">{p.category}</div></td>
-              <td>{p.hook}</td>
-              <td style="white-space:nowrap;">{p.band}</td>
-              <td style='max-width:220px; font-size:.9rem;'>{p.fees.items.slice(0, 2).join(' · ')}</td>
-              <td style="max-width:220px; font-size:.9rem;">{p.fees.items.slice(0, 2).join(' · ')}</td>
-              <td><a href={p.href} style="color:var(--accent-strong); font-weight:700; white-space:nowrap;">Details →</a></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <p class="note" style="margin-top:1rem;">Indicative 2025–26 pricing shown for comparison — placeholder market ranges, not committed quotes. Exact terms are confirmed in writing only after credit approval.</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0.5rem;">
-    <div class="container">
-      <div class="grid-articles" style="grid-template-columns:1fr 1fr;">
-        <div class="card">
-          <span class="eyebrow">Not sure which fits?</span>
-          <h3 style="margin:.5rem 0;">Choose by need</h3>
-          <p style="color:var(--muted); margin-bottom:1.2rem;">Buying before selling is typically bridging finance; smoothing cash flow is business finance. Our guides explain the difference.</p>
-          <a class="btn btn-ghost" href="/learn/">Read the guides</a>
-        </div>
-        <div class="card">
-          <span class="eyebrow">Apply</span>
-          <h3 style="margin:.5rem 0;">Get a written offer</h3>
-          <p style="color:var(--muted); margin-bottom:1.2rem;">A two minute form and a soft check. An underwriter confirms pricing in writing before you commit to anything.</p>
-          <a class="btn btn-primary" href="/apply/">Start an application</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<Base title="Compare products | SME Lending Platform" description="Compare every lending product by amount, term, cost and security.">
+  <ClientPage page="compare" />
 </Base>

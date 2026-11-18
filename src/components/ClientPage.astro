@@ -1,0 +1,13 @@
+---
+import { renderPage } from '../data/client-site.mjs';
+
+const { page, slug = '' } = Astro.props;
+const html = renderPage(page, slug);
+---
+
+<div class="wrap" id="app" data-page={page} data-slug={slug} set:html={html} />
+
+<script>
+  import { initPage } from '../scripts/client-app.js';
+  initPage();
+</script>
