@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { BRAND, PHONE, EMAIL } from '../data/client-site.mjs';
 
 const { title = BRAND, description = 'Business lending and corporate-investor finance, with published rates and live calculators.' } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site || 'https://vantage-lending.onrender.com').href;
+const canonical = new URL(Astro.url.pathname, Astro.site || 'https://vantagelending.onrender.com').href;
 
 const schema = {
   '@context': 'https://schema.org',

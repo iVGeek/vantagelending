@@ -7,7 +7,7 @@ This document compares the website **before the latest client update** with the 
 - **Before:** the previous multi-page Astro site (generic “SME Lending Platform” branding, six products, retail/HNW investor language).
 - **After:** the client’s latest standalone design and content, ported into the same Astro routes and sitemap.
 
-The new version is already built and live-ready in structure, but it deliberately keeps all rates, statistics, case studies, legal wording and company details clearly flagged as placeholders.
+The new version is live at https://vantagelending.onrender.com/ in structure, but it deliberately keeps all rates, statistics, case studies, legal wording and company details clearly flagged as placeholders.
 
 ---
 
