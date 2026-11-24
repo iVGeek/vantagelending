@@ -13,7 +13,7 @@ This document answers the client's questions directly:
 - **Source of truth:** `SME-Lending-Website-standalone use this html.html`. The other attachment (`SME-Lending-Website.html`) is an earlier working version; the two are almost identical except for the calculator's product selector.
 - **After:** the client's latest design and content, ported into the same Astro routes and sitemap. It is live at **https://vantagelending.onrender.com/**.
 
-All rates, statistics, case studies, legal wording and company details remain clearly flagged as placeholders.
+The previous working name, **SME Lending Platform**, is now used across the site instead of the `brandname` placeholder. All rates, statistics, case studies, legal wording and company details remain clearly flagged as placeholders.
 
 ---
 
@@ -53,7 +53,7 @@ All rates, statistics, case studies, legal wording and company details remain cl
 **Where it does not deliver it yet**
 
 - A risk warning is the first line on the page. It must be there in some form, but its placement and tone need solicitor sign-off so it informs without alarming.
-- `brandname`, `[Company name] Ltd`, `[PLACEHOLDER]` rates and `[To be supplied by solicitors.]` sections undermine confidence.
+- `brandname` and `[Company name] Ltd` have now been replaced with the working name and the previous placeholder details; `[PLACEHOLDER]` rates and `[To be supplied by solicitors.]` sections still undermine confidence.
 - Long fee tables and the “what we do not lend on” list are necessary, but they currently read as legal text rather than friendly guidance.
 - The investor entity gate adds friction; it is required for the corporate-only rule but should be explained clearly.
 
@@ -63,7 +63,7 @@ All rates, statistics, case studies, legal wording and company details remain cl
 
 ## 3. Suggested names
 
-These are proposed **trading names**. The corresponding legal entity would be e.g. `[Name] Ltd`, subject to Companies House, UKIPO, trademark and domain checks. Domains shown are suggestions only and have not been verified as available.
+The site currently uses **SME Lending Platform** as the working name. The names below are proposed **final trading names** for the client to choose from. The corresponding legal entity would be e.g. `[Name] Ltd`, subject to Companies House, UKIPO, trademark and domain checks. Domains shown are suggestions only and have not been verified as available.
 
 | # | Name | Why it works | Suggested domain | Suggested tagline |
 |---:|---|---|---|---|
@@ -124,7 +124,7 @@ Scores are out of 10. Weights reflect the priorities in the business plan: websi
 
 These are not defects in the new design; they are the gates the business plan itself calls out.
 
-1. **No real company identity yet** — trading name, legal entity, company number, ICO and contact details remain placeholders.
+1. **No real company identity yet** — the working name is now “SME Lending Platform”, but the legal entity, company number, ICO and registered address remain placeholders.
 2. **Rates and statistics are indicative** — all figures are flagged as placeholders and must be confirmed by pricing/legal before launch.
 3. **Forms are prototypes** — Apply, Contact and Investor Register do not transmit anything and say so on screen.
 4. **Investor gate needs server-side enforcement** — the current gate is a client-side prototype and needs solicitor-approved wording plus server-side controls.

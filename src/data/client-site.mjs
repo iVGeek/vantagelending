@@ -1,5 +1,5 @@
-const BRAND="brandname";
-const CO="[Company name] Ltd", CONUM="[company number]", PHONE="020 7000 0000", EMAIL="hello@[domain]", ICO="[ICO number]";
+const BRAND="SME Lending Platform";
+const CONUM="XXXXXXXX", PHONE="020 7000 0000", EMAIL="hello@smelending.co.uk", ICO="XXXXXXXX";
 
 const BANDS={
   res:{name:"Residential bridging",bands:[[55,.64],[65,.69],[75,.74]],arr:2},
@@ -201,7 +201,7 @@ pages.guide=(t,b)=>`<section class="s">${head("Learn",t,"Plain-English guide")}<
 pages.glossary=()=>`<section class="s">${head("Glossary","Terms, translated")}<div class="field" style="max-width:420px;margin-bottom:20px"><label for="gs">Search</label><input id="gs" type="text" placeholder="LTV, ERC, factor rate..."></div><div class="grid g2" id="gl"></div></section>`;
 pages.about=()=>`<section class="s">${head("About","Why we are building this","[Founder story placeholder: two or three honest paragraphs on who you are and why you are building a direct lender.]")}
 <div class="grid g3"><div class="card mint"><h3>Say the price</h3><p class="small">If a number matters to you, it is on the page.</p></div><div class="card lemon"><h3>No surprises at the end</h3><p class="small">No exit fees. No early-repayment charges. Retained interest is shown as retained.</p></div><div class="card coral"><h3>Straight answers</h3><p class="small">If a deal does not fit, we say so early.</p></div></div>
-<div class="card sunk stack" style="margin-top:26px"><h3>Trust and regulation</h3><p>${CO} (company number ${CONUM}, ICO ${ICO}). We lend for business purposes and do not hold client money. We do not take money from consumers.</p><p class="muted small">[Legal to confirm: exact regulatory status and permissions for each product, and for the investor side, before launch.]</p></div></section>`;
+<div class="card sunk stack" style="margin-top:26px"><h3>Trust and regulation</h3><p>${BRAND} (pre-launch working name; legal entity to confirm), company number ${CONUM}, ICO ${ICO}. We lend for business purposes and do not hold client money. We do not take money from consumers.</p><p class="muted small">[Legal to confirm: exact regulatory status and permissions for each product, and for the investor side, before launch.]</p></div></section>`;
 pages.contact=()=>`<section class="s">${head("Contact","Talk to us")}<div class="grid g2"><div class="card stack"><h3>Direct</h3><p>Phone: <b>${PHONE}</b></p><p>Email: <b>${EMAIL}</b></p><p class="muted small">[Placeholder London address]. Brokers, platforms and investors: use the routes on the Apply and Invest pages.</p></div><div class="card">${formHTML("ct",[["Name","text"],["Email","email"],["Message","area"]],"Send message")}</div></div></section>`;
 pages.legal=()=>`<section class="s">${head("Legal and compliance","Terms, privacy and risk")}<div class="stack" style="max-width:780px"><div class="note risk"><b>Risk.</b> Lending carries risk of loss. Capital invested in loans can be lost in full and returns are not guaranteed. Investments are not protected by the Financial Services Compensation Scheme.</div><details open><summary>Terms of use</summary><p>[To be supplied by solicitors.]</p></details><details><summary>Privacy policy</summary><p>[To be supplied by solicitors: what we collect, why, how long we keep it, who we share it with.]</p></details><details><summary>Complaints</summary><p>[To be supplied by solicitors.]</p></details><details><summary>Cookies</summary><p>[To be supplied.]</p></details></div></section>`;
 
@@ -291,7 +291,7 @@ export function renderPage(key, slug) {
 }
 
 export {
-  BRAND, CO, CONUM, PHONE, EMAIL, ICO,
+  BRAND, CONUM, PHONE, EMAIL, ICO,
   BANDS, TT, UNSEC, RBF, TARGETS,
   bridgeRate, bridgeCalc, unsecRate, unsecCalc, rbfBand, rbfCalc, investCalc, G, pct,
   STEPS, PRODUCTS, CASES, GLOSS, FAQ, DOCS, EXCL, LEARN,
